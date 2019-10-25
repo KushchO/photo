@@ -1,0 +1,50 @@
+@mixin centered {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@mixin beforeAfter {
+  content: '';
+  position: absolute;
+  display: block;
+  background: no-repeat;
+}
+
+/*Микисины шрифтов :BEGIN*/
+@mixin light17 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+@mixin regular20 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+@mixin regular22 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+@mixin light27 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+@mixin regular18 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+/*Микисины шрифтов: END*/

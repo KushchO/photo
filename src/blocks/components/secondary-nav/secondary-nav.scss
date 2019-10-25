@@ -1,0 +1,50 @@
+.secondary-nav {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.nav__item {
+  margin-left: 65px;
+  position: relative;
+}
+
+.nav__item:nth-child(1)::before {
+  @include beforeAfter;
+  background-image: url('../img/svg/phone.svg');
+  width: 35px;
+  height: 37px;
+  top: -14px;
+  left: -33px;
+}
+
+.nav__item:nth-child(2)::before {
+  @include beforeAfter;
+  background-image: url('../img/svg/location.svg');
+  width: 27px;
+  height: 32px;
+  top: -11px;
+  left: -38px;
+}
+
+.nav__item:nth-child(3)::before {
+  @include beforeAfter;
+  background-image: url('../img/svg/envelope.svg');
+  width: 30px;
+  height: 23px;
+  top: -6px;
+  left: -45px;
+}
+
+.nav__item:nth-child(4)::before {
+  @include beforeAfter;
+  background-image: url('../img/svg/price.svg');
+  width: 37px;
+  height: 27px;
+  top: -7px;
+  left: -40px;
+
+
+  .nav__text {
+    margin-left: 2px;
+  }

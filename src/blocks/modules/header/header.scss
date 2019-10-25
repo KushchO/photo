@@ -1,0 +1,64 @@
+.delivery__header {
+  flex-direction: column;
+  padding-top: 53px;
+}
+
+/*Верхняя часть с лого и ссылками */
+.header-top {
+  @include centered;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.header-top__logo {
+  margin-left: 5px;
+}
+
+
+
+/* Промо строка*/
+
+.header__promo {
+  display: flex;
+  background-color: #544C58;
+  padding: 5px 0;
+
+
+  .promo__wrapper {
+    @include centered;
+    justify-content: center;
+  }
+
+
+  .promo__text {
+    @include regular20;
+    color: #ffffff;
+    margin-left: 20px;
+  }
+
+}
+
+/* Промо строка*/
+
+/* Главное меню в Хедере */
+
+.main-nav__list {
+  @include centered;
+  justify-content: center;
+  padding: 35px 0;
+}
+
+.main-nav__item {
+  padding-left: 32px;
+  padding-right: 31px;
+  @include regular22;
+}
+
+.main-nav__item:not(:first-child) {
+  background-image: url('../img/separator.png');
+  background-repeat: no-repeat;
+}
+
+/* Главное меню в Хедере */
