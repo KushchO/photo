@@ -1,0 +1,44 @@
+.about {
+  padding-top: 10px;
+  padding-bottom: 100px;
+  z-index: 5;
+}
+
+.about-wrapper {
+  @include centered;
+  justify-content: space-between;
+}
+
+.about__item {
+  width: 32.9%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__image {
+  width: 100%;
+}
+
+.about__title {
+  @include light32;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.about__text {
+  @include light17;
+  text-align: center;
+  line-height: 28px;
+}
+
+.about__link {
+  padding: 15px 16px;
+  display: block;
+  min-width: 71%;
+  text-align: center;
+  border: 1px solid #707070;
+  background: #F7F7F7;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 15px;
+}

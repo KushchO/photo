@@ -1,0 +1,53 @@
+.main-maps {
+  @include centered;
+  text-align: center;
+  padding-top: 50px;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.main-maps__item {
+  width: 49%;
+  position: relative;
+}
+
+.main-maps__title {
+  @include light32;
+  margin-bottom: 25px;
+}
+
+.main-maps__button {
+  background: transparent;
+  border: none;
+  padding-left: 28px;
+  position: relative;
+  margin-left: 15px;
+
+  &::before {
+    @include beforeAfter;
+    left: -4px;
+  }
+}
+
+.main-maps__button--expand::before {
+  width: 16.4px;
+  height: 16.4px;
+  background-image: url('../img/svg/expand.svg');
+}
+
+.main-maps__button--print::before {
+  width: 22px;
+  height: 19px;
+  background-image: url('../img/svg/print.svg');
+}
+
+.main-maps__map-wrapper {
+  padding-top: 25px;
+  width: 100%;
+  position: relative;
+}
+
+.main-maps__image {
+  width: 100%;
+}

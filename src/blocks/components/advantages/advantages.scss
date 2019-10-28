@@ -1,0 +1,45 @@
+.advantages {
+  background: $light-gray;
+  @include light-gray-block;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  z-index: 10;
+
+  &::before {
+    @include beforeAfter;
+    @include light-gray-block-before;
+    background-image: url('../img/svg/star.svg');
+  }
+}
+
+.advantages__wrapper {
+  @include centered;
+  flex-direction: column;
+  text-align: center;
+}
+
+.advantages__title {
+  @include light44;
+  letter-spacing: -0.7px;
+  margin-bottom: 35px;
+}
+
+.advantages__text {
+  @include light22;
+  letter-spacing: unset;
+  line-height: 33.5px;
+  margin: 0;
+}
+
+.advantages__button {
+  @include regular22;
+  margin: 28px auto 0;
+  padding: 15px 10px;
+  display: block;
+  min-width: 32.5%;
+  color: #ffffff;
+  background: #9E1935;
+  border: 1px solid $dark-gray;
+  border-radius: 2px;
+
+}

@@ -1,15 +1,36 @@
 @mixin centered {
-  display: flex;
+  display: flex !important;
   max-width: 1280px;
   margin: 0 auto;
+  width: 100%;
 }
+
+/*BLOCKS BEGIN*/
 
 @mixin beforeAfter {
   content: '';
   position: absolute;
   display: block;
-  background: no-repeat;
+  background-repeat: no-repeat;
 }
+
+@mixin light-gray-block-before {
+  width: 64px;
+  height: 64px;
+  background-size: 64px 64px;
+  z-index: 100;
+  top: -32px;
+  left: 48%;
+}
+
+@mixin light-gray-block {
+  margin: 0 20px;
+  border-radius: 8px;
+  background: $light-gray;
+  position: relative;
+}
+
+/*BLOCKS END*/
 
 /*Микисины шрифтов :BEGIN*/
 @mixin light17 {
@@ -33,6 +54,20 @@
   line-height: 25px;
 }
 
+@mixin light22 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+@mixin regular24 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
 @mixin light27 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 24px;
@@ -45,6 +80,27 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
+}
+
+@mixin light32 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+@mixin thin44 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+@mixin light44 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 60px;
 }
 
 /*Микисины шрифтов: END*/

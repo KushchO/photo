@@ -10,13 +10,20 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
+  box-sizing: border-box;
+  ;
 }
 
 .header-top__logo {
   margin-left: 5px;
 }
 
-
+@media (max-width: 1400px) {
+  .header-top {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+}
 
 /* Промо строка*/
 
@@ -38,6 +45,14 @@
     margin-left: 20px;
   }
 
+}
+
+@media (max-width: 1200px) {
+  .header__promo {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    text-align: center;
+  }
 }
 
 /* Промо строка*/
