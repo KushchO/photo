@@ -2,10 +2,10 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $(document).ready(function() {
-	$('.slider-wrapper').slick({
+	$('.slider__wrapper').slick({
 		arrows: true,
 		dots: true,
-		appendDots: $('.slide-info'),
+		appendDots: $('.slider__info'),
 		//autoplay: true,
 		slidesToShow: 1,
 		slidesToScroll: 1

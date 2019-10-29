@@ -32,10 +32,9 @@
 }
 
 
-.slider-wrapper {
+.slider__wrapper {
   @include centered;
   position: relative;
-
 
   .slick-prev,
   .slick-next {
@@ -68,12 +67,12 @@
   color: #ffffff;
 }
 
-.slide_image,
-.slide-info {
+.slider__image,
+.slider__info {
   width: 50%;
 }
 
-.slide-info {
+.slider__info {
   padding-top: 32px;
   padding-left: 3%;
   padding-right: 8%;
@@ -81,13 +80,11 @@
   position: relative;
 }
 
-.slide__title {
+.slider__title {
   @include thin44;
 }
 
-
-
-.slide__link {
+.slider__link {
   @include light22;
   color: #ffffff;
   text-decoration: underline;
@@ -96,12 +93,12 @@
 }
 
 @media (max-width: 1720px) {
-  .slide__title {
+  .slider__title {
     font-size: 2.5vw;
     line-height: 3.7vw;
   }
 
-  .slide__link {
+  .slider__link {
     font-size: 1.2vw;
   }
 }
