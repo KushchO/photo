@@ -1,0 +1,82 @@
+.address {
+  @include centered;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 75px;
+}
+
+.address__title {
+  @include pageTitleThin50;
+}
+
+.address__manager {
+  display: flex;
+  padding-top: 70px;
+  width: 30%;
+}
+
+.address__profile {
+  padding-top: 20px;
+  padding-left: 6%;
+  display: flex;
+  flex-direction: column;
+}
+
+.address__name {
+  @include fontMuseoRegular24;
+  color: $red-text;
+}
+
+.address__position {
+  @include fontMuseoLight22;
+  line-height: 30px;
+  padding-top: 15px;
+}
+
+.address__list {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  @include fontMuseoLight22;
+}
+
+.address__item {
+  padding-left: 5%;
+  margin-bottom: 25px;
+  position: relative;
+
+  b {
+    font-weight: 700;
+  }
+
+  &::before {
+    @include beforeAfter;
+    width: 38px;
+    height: 40px;
+    top: -4px;
+    left: 0%;
+  }
+}
+
+.address__item--mail::before {
+  background-image: url('../img/svg/mail.svg');
+}
+
+.address__item--phone::before {
+  background-image: url('../img/svg/phone2.svg');
+}
+
+.address__item--location::before {
+  background-image: url('../img/svg/location2.svg');
+}
+
+.map-buttons {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1350px) {
+  .address {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}

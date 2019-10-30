@@ -3,7 +3,9 @@
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
 }
+
 
 /*BLOCKS BEGIN*/
 
@@ -30,6 +32,12 @@
   position: relative;
 }
 
+@mixin light-gray-block-narrow {
+  border-radius: 8px;
+  background: $light-gray;
+  position: relative;
+}
+
 /*BLOCKS END*/
 
 /*Микисины шрифтов :BEGIN*/
@@ -40,6 +48,20 @@
   line-height: 19px;
 }
 
+@mixin fontMuseoLight16 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+@mixin fontMuseolight18 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
 @mixin regular20 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 20px;
@@ -47,24 +69,45 @@
   line-height: 22px;
 }
 
-@mixin regular22 {
+@mixin fontMuseolight20 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+@mixin fontMuseoRegular22 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 25px;
 }
 
-@mixin light22 {
+@mixin fontMuseoLight22 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 22px;
   font-weight: 300;
   line-height: 25px;
 }
 
-@mixin regular24 {
+@mixin fontMuseoRegular24 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 24px;
   font-weight: 500;
+  line-height: 26px;
+}
+
+@mixin fontMuseoBold24 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@mixin fontMuseoLight24 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
   line-height: 26px;
 }
 
@@ -82,11 +125,18 @@
   line-height: 27px;
 }
 
-@mixin light32 {
+@mixin fontMuseolight32 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 32px;
   font-weight: 300;
   line-height: 35px;
+}
+
+@mixin fontMuseolight36 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 38px;
 }
 
 @mixin thin44 {
@@ -96,10 +146,18 @@
   line-height: 60px;
 }
 
-@mixin light44 {
+@mixin fontMuseoLight44 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 44px;
   font-weight: 300;
+  line-height: 60px;
+  text-align: center;
+}
+
+@mixin pageTitleThin50 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 50px;
+  font-weight: 100;
   line-height: 60px;
 }
 

@@ -1,0 +1,34 @@
+.info-block {
+  @include centered;
+  justify-content: space-between;
+  padding-top: 58px;
+  padding-bottom: 75px;
+}
+
+.info-block__item {
+  width: 49%;
+  text-align: center;
+}
+
+.info-block__pic {
+  width: 100%;
+  display: block;
+}
+
+.info-block__title {
+  @include fontMuseolight36;
+  padding-top: 30px;
+}
+
+.info-block__text {
+  @include fontMuseolight18;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 5px;
+  line-height: 30px;
+  padding-bottom: 15px;
+}
+
+.info-block__link {
+  max-width: 48%;
+}

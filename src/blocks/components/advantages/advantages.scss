@@ -19,20 +19,20 @@
 }
 
 .advantages__title {
-  @include light44;
+  @include fontMuseoLight44;
   letter-spacing: -0.7px;
   margin-bottom: 35px;
 }
 
 .advantages__text {
-  @include light22;
+  @include fontMuseoLight22;
   letter-spacing: unset;
   line-height: 33.5px;
   margin: 0;
 }
 
 .advantages__button {
-  @include regular22;
+  @include fontMuseoRegular22;
   margin: 28px auto 0;
   padding: 15px 10px;
   display: block;

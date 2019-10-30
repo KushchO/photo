@@ -1,0 +1,70 @@
+.points {
+  @include centered;
+  flex-direction: column;
+  padding-bottom: 95px;
+  box-sizing: border-box;
+}
+
+.points__topic-title {
+  @include fontMuseoLight44;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.points__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.points__item {
+  box-sizing: border-box;
+  max-width: 49%;
+  width: 49%;
+  padding-top: 95px;
+  padding-left: 13%;
+  padding-bottom: 85px;
+  background-color: $block;
+  margin-bottom: 15px;
+  position: relative;
+
+  &::before {
+    @include beforeAfter;
+    width: 77px;
+    height: 80px;
+    top: 30px;
+    left: 6%;
+  }
+}
+
+.points__item--time::before {
+  background-image: url('../img/svg/time.svg');
+}
+
+.points__item--box::before {
+  background-image: url('../img/svg/box.svg');
+}
+
+.points__item--cup::before {
+  background-image: url('../img/svg/cup.svg');
+}
+
+.points__item--medal::before {
+  background-image: url('../img/svg/medal.svg');
+}
+
+.points__title {
+  @include fontMuseoBold24;
+  padding-bottom: 10px;
+}
+
+.points__text {
+  @include fontMuseoLight24;
+}
+
+@media (max-width: 1350px) {
+  .points {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}

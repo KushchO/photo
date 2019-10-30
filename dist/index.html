@@ -35,7 +35,7 @@
 <body>
     <header class="delivery__header">
   <div class="header-top">
-    <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+    <a href="/"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
     <ul class="secondary-nav">
   <li class="nav__item">
     <a href="#" class="nav__link" alt="Телефон">
@@ -43,7 +43,7 @@
     </a>
   </li>
   <li class="nav__item">
-    <a href="#" class="nav__link" alt="Адрес">
+    <a href="./address.html" class="nav__link" alt="Адрес">
       </svg>
       <span class="nav__text">Адрес</span>
     </a>
@@ -54,7 +54,7 @@
     </a>
   </li>
   <li class="nav__item">
-    <a href="#" class="nav__link" alt="Цены">
+    <a href="/prices.html" class="nav__link" alt="Цены">
       <span class="nav__text">Цены</span>
     </a>
   </li>
@@ -69,10 +69,11 @@
     </div>
   </div>
   <ul class="header__nav main-nav__list">
-    <li class="main-nav__item"><a href="#" class="main-nav__link">Доставка с примеркой</a></li>
-    <li class="main-nav__item"><a href="#" class="main-nav__link">Пункты выдачи заказов</a></li>
-    <li class="main-nav__item"><a href="#" class="main-nav__link">Упаковка</a></li>
-    <li class="main-nav__item"><a href="#" class="main-nav__link">Цены</a></li>
+    <li class="main-nav__item"><a href="/delivery-with-fitting.html" class="main-nav__link">Доставка с примеркой</a>
+    </li>
+    <li class="main-nav__item"><a href="/pvz.html" class="main-nav__link">Пункты выдачи заказов</a></li>
+    <li class="main-nav__item"><a href="/package.html" class="main-nav__link">Упаковка</a></li>
+    <li class="main-nav__item"><a href="/prices.html" class="main-nav__link">Цены</a></li>
   </ul>
 </header>
     <section class="main-slider slider-wrapper">
@@ -115,7 +116,7 @@
       <h3 class="about__title">Доставка с примеркой</h3>
       <p class="about__text">Самостоятельно заберем заказы ваших&nbsp;покупателей, аккуратно упакуем и доставим
         по адресу в срок</p>
-      <a href="" class="about__link">Подробнее</a>
+      <a href="" class="about__link button-more">Подробнее</a>
     </div>
     <div class="about__item">
       <picture>
@@ -125,7 +126,7 @@
       <p class="about__text">Ваши клиенты могут забрать свои заказы<br>
         из наших пунктов выдачи, расположенных<br>
         в разных районах Москвы</p>
-      <a href="" class="about__link">Подробнее</a>
+      <a href="" class="about__link button-more">Подробнее</a>
     </div>
     <div class="about__item">
       <picture>
@@ -134,7 +135,7 @@
       <h3 class="about__title">Упаковка</h3>
       <p class="about__text">Бережно оформим каждый заказ, предложив различные варианты упаковки, в соответствии<br>
         с габаритами и типом товара</p>
-      <a href="" class="about__link">Подробнее</a>
+      <a href="" class="about__link button-more">Подробнее</a>
     </div>
   </div>
 </section>
@@ -157,20 +158,20 @@
     <section class="main-maps">
   <div class="main-maps__item">
     <h2 class="main-maps__title">Область доставки</h2>
-    <div class="main-maps__buttons">
-      <button class="main-maps__button main-maps__button--expand">Развернуть</button>
-      <button class="main-maps__button main-maps__button--print">На печать</button>
-    </div>
+    <div class="map-buttons">
+  <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
+  <button class="map-buttons__button map-buttons__button--print">На печать</button>
+</div>
     <div class="main-maps__map-wrapper">
       <img src="./img/map1.jpg" alt="" class="main-maps__image">
     </div>
   </div>
   <div class="main-maps__item">
     <h2 class="main-maps__title">Пункты выдачи</h2>
-    <div class="main-maps__buttons">
-      <button class="main-maps__button main-maps__button--expand">Развернуть</button>
-      <button class="main-maps__button main-maps__button--print">На печать</button>
-    </div>
+    <div class="map-buttons">
+  <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
+  <button class="map-buttons__button map-buttons__button--print">На печать</button>
+</div>
     <div class="main-maps__map-wrapper">
       <img src="./img/map2.jpg" alt="" class="main-maps__image">
     </div>
@@ -192,7 +193,7 @@
     </form>
     <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в соответствии
       с
-      условиями <a class="request-form__link">соглашения<a></p>
+      условиями <a class="request-form__link">соглашения</a></p>
   </div>
 </section>
     <footer class="delivery-footer">
@@ -216,7 +217,7 @@
     </a>
   </li>
   <li class="nav__item">
-    <a href="#" class="nav__link" alt="Адрес">
+    <a href="./address.html" class="nav__link" alt="Адрес">
       </svg>
       <span class="nav__text">Адрес</span>
     </a>
@@ -227,7 +228,7 @@
     </a>
   </li>
   <li class="nav__item">
-    <a href="#" class="nav__link" alt="Цены">
+    <a href="/prices.html" class="nav__link" alt="Цены">
       <span class="nav__text">Цены</span>
     </a>
   </li>
@@ -239,7 +240,9 @@
   </div>
 </footer>
     <section class="request-form request-form__popup">
-  <span class="request-form__close"></span>
+  <button class="close-element">
+
+</button>
   <div class="request-form__wrapper">
     <h2 class="request-form__title">Заявка на доставку </h2>
     <p class="request-form__info">Будем рады подробнее рассказать о нашем сервисе и ответить на вопросы

@@ -1,0 +1,41 @@
+.conditions {
+  @include centered;
+  position: relative;
+  justify-content: space-between;
+  padding-bottom: 78px;
+}
+
+.conditions__item {
+  text-align: center;
+  @include light-gray-block-narrow;
+  width: 49%;
+  padding-top: 58px;
+
+  &::before {
+    @include beforeAfter;
+    width: 58px;
+    height: 58px;
+    left: 46%;
+    top: -30px;
+  }
+}
+
+.conditions__item--yes::before {
+  background-image: url('../img/svg/green_check.svg');
+}
+
+.conditions__item--no::before {
+  background-image: url('../img/svg/red_no.svg');
+}
+
+.conditions__title {
+  @include fontMuseolight32;
+}
+
+.conditions__text {
+  @include fontMuseoLight22;
+  padding: 0 7%;
+  padding-top: 32px;
+  margin: 0;
+  line-height: 32px;
+}

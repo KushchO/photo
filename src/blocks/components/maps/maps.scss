@@ -1,0 +1,20 @@
+.delivery-range {
+  @include centered;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 90px;
+
+  .map-buttons {
+    margin: 0 auto;
+  }
+}
+
+.delivery-range__title {
+  @include fontMuseoLight44;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.delivery-range__map-wrapper {
+  padding-top: 25px;
+}

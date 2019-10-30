@@ -1,0 +1,25 @@
+.map-buttons__button {
+  background: transparent;
+  border: none;
+  padding-left: 28px;
+  position: relative;
+  margin-left: 15px;
+
+  &::before {
+    @include beforeAfter;
+    left: -4px;
+  }
+}
+
+.map-buttons__button--expand::before {
+  width: 16.4px;
+  height: 16.4px;
+  background-image: url('../img/svg/expand.svg');
+  background-size: 16.4px 16.4px;
+}
+
+.map-buttons__button--print::before {
+  width: 22px;
+  height: 19px;
+  background-image: url('../img/svg/print.svg');
+}

@@ -1,2 +1,2 @@
 import '%components%/main-slider/main-slider';
-import '%components%/request-popup/request-popup';
+import '%components%/request-form/request-popup';

@@ -1,0 +1,64 @@
+.delivery-regions {
+  @include centered;
+  flex-direction: column;
+  padding-bottom: $bottom35Gap;
+}
+
+.delivery-regions__picture {
+  width: 22%;
+  position: relative;
+}
+
+.delivery-regions__image {
+  width: 100%;
+}
+
+.delivery-regions__region {
+  display: flex;
+  position: relative;
+  padding-bottom: $bottom35Gap;
+}
+
+.delivery-regions__info {
+  padding-left: 3%;
+}
+
+.delivery-regions__title {
+  @include fontMuseolight32;
+  padding-bottom: 27px;
+  line-height: 38px;
+}
+
+.delivery-regions__feature {
+  @include fontMuseolight20;
+  padding-left: 42px;
+  margin-bottom: 18px;
+  position: relative;
+
+  &::before {
+    @include beforeAfter;
+    width: 26px;
+    height: 26px;
+    left: 2px;
+  }
+}
+
+.delivery-regions__feature--schedule::before {
+
+  background-image: url('../img/svg/scheldue.svg');
+  background-size: 26px 26px;
+}
+
+.delivery-regions__feature--quantuty::before {
+  background-image: url('../img/svg/quantity.svg');
+}
+
+.delivery-regions__feature--condition::before {
+  background-image: url('../img/svg/condition.svg');
+}
+
+@media (max-width: 1350px) {
+  .delivery-regions {
+    padding: 0 1%;
+  }
+}

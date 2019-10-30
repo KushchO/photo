@@ -1,0 +1,82 @@
+.request-form {
+  @include light-gray-block;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 55px;
+  position: relative;
+
+  &::before {
+    @include beforeAfter;
+    @include light-gray-block-before;
+    background-image: url('../img/svg/check.svg');
+  }
+
+  .request-form__question {
+    @include regular20;
+    width: 96%;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+  }
+}
+
+.request-form__title {
+  @include fontMuseoLight44;
+}
+
+.request-form__info {
+  @include fontMuseoRegular24;
+}
+
+.request-form__submit {
+  width: 33%;
+  margin: 0 auto;
+  @include fontMuseoRegular22;
+  color: #ffffff;
+  padding: 17px 20px;
+  background-color: $button;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.request-form__link {
+  color: $blue-link;
+}
+
+.request-form__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.request-form__popup {
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  width: 75%;
+  padding: 50px 2%;
+  max-width: 1280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 105000;
+  transition: all 1s ease 0s;
+  ;
+
+  &::before {
+    display: none;
+  }
+
+  .request-form__close {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/svg/close.svg');
+    background-size: 30px 30px;
+    right: 20px;
+    top: 20px;
+    left: unset;
+  }
+
+}

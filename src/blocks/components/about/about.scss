@@ -20,7 +20,7 @@
 }
 
 .about__title {
-  @include light32;
+  @include fontMuseolight32;
   text-align: center;
   padding-top: 32px;
 }
@@ -32,13 +32,5 @@
 }
 
 .about__link {
-  padding: 15px 16px;
-  display: block;
   min-width: 71%;
-  text-align: center;
-  border: 1px solid #707070;
-  background: #F7F7F7;
-  border-radius: 4px;
-  margin: 0 auto;
-  margin-top: 15px;
 }

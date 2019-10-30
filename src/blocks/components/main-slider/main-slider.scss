@@ -11,10 +11,15 @@
 .slick-dots {
   width: auto;
   bottom: 35px;
+  left: 53%;
 
   li button {
     width: 15px;
     height: 15px;
+  }
+
+  .slick-active {
+    opacity: 1;
   }
 }
 
@@ -25,10 +30,6 @@
   background-color: #ffffff;
   opacity: 0.3;
   margin: 0 4px;
-}
-
-.slick-active {
-  opacity: 1;
 }
 
 
@@ -85,7 +86,7 @@
 }
 
 .slider__link {
-  @include light22;
+  @include fontMuseoLight22;
   color: #ffffff;
   text-decoration: underline;
   display: block;

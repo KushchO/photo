@@ -1,6 +1,6 @@
 @import "modules/header/header";
 @import "modules/footer/footer";
-@import "modules/request-form/request-form";
+@import "components/request-form/request-form";
 @import "components/secondary-nav/secondary-nav.scss";
 @import "components/main-slider/main-slider.scss";
 @import "components/about/about.scss";
@@ -8,3 +8,15 @@
 @import "components/main-maps/main-maps.scss";
 @import "components/form-inputs/form-inputs.scss";
 @import "components/overlay/overlay.scss";
+@import "components/top-info-blocks/top-info-blocks.scss";
+@import "components/close-element/close-element.scss";
+@import "components/conditions/conditions.scss";
+@import "components/delivery-regions/delivery-regions.scss";
+@import "components/maps/maps.scss";
+@import "components/map-buttons/map-buttons.scss";
+@import "components/info-block/info-block.scss";
+@import "components/button-more/button-more.scss";
+@import "components/moscow-pvz/moscow-pvz.scss";
+@import "components/points/points.scss";
+@import "components/prices/prices.scss";
+@import "components/address/address.scss";

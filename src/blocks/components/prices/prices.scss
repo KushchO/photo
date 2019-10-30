@@ -1,0 +1,64 @@
+.prices {
+  @include centered;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 85px;
+
+  .close-element {
+    right: 0px;
+    top: 35px;
+  }
+}
+
+.prices__topic-title {
+  @include pageTitleThin50;
+  padding-bottom: 40px;
+}
+
+.prices__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.prices__item {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices__block {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  width: 49%;
+  box-sizing: border-box;
+
+  background-color: $light-gray;
+}
+
+.prices__about {
+  padding-left: 9%;
+}
+
+.prices__price-block {
+  padding-left: 2.8%;
+  display: flex;
+  flex-direction: column;
+}
+
+.prices__title,
+.prices__price {
+  @include fontMuseoRegular22;
+  padding-bottom: 12px;
+}
+
+.prices__sub-text {
+  @include fontMuseolight18;
+}
+
+.prices__text {
+  @include fontMuseoLight16;
+
+}

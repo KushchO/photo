@@ -1,0 +1,13 @@
+.close-element {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/svg/close.svg');
+  background-size: 30px 30px;
+  background-color: transparent;
+  border: none;
+  right: 20px;
+  top: 20px;
+  left: unset;
+}
