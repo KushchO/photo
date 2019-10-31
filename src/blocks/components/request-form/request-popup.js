@@ -1,7 +1,9 @@
 const requestButton = document.querySelector('.advantages__button');
 const overlay = document.querySelector('.popup_overlay');
 const requestPopup = document.querySelector('.request-form__popup');
-const close = requestPopup.querySelector('.close-element');
+if (requestPopup) {
+	const close = requestPopup.querySelector('.close-element');
+}
 
 if (requestButton && overlay && requestPopup) {
 	requestButton.addEventListener('click', function() {

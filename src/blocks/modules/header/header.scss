@@ -40,7 +40,7 @@
 
 
   .promo__text {
-    @include regular20;
+    @include fontMuseoRegular20;
     color: #ffffff;
     margin-left: 20px;
   }
@@ -74,6 +74,10 @@
 .main-nav__item:not(:first-child) {
   background-image: url('../img/separator.png');
   background-repeat: no-repeat;
+}
+
+.main-nav__link.active-link {
+  color: $red-text;
 }
 
 /* Главное меню в Хедере */

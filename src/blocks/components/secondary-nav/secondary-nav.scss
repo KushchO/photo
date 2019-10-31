@@ -4,12 +4,12 @@
   padding-bottom: 5px;
 }
 
-.nav__item {
+.secondary-nav__link {
   margin-left: 65px;
   position: relative;
 }
 
-.nav__item:nth-child(1)::before {
+.secondary-nav__item:nth-child(1) .secondary-nav__link::before {
   @include beforeAfter;
   background-image: url('../img/svg/phone.svg');
   width: 35px;
@@ -18,7 +18,7 @@
   left: -33px;
 }
 
-.nav__item:nth-child(2)::before {
+.secondary-nav__item:nth-child(2) .secondary-nav__link::before {
   @include beforeAfter;
   background-image: url('../img/svg/location.svg');
   width: 27px;
@@ -27,7 +27,7 @@
   left: -38px;
 }
 
-.nav__item:nth-child(3)::before {
+.secondary-nav__item:nth-child(3) .secondary-nav__link::before {
   @include beforeAfter;
   background-image: url('../img/svg/envelope.svg');
   width: 30px;
@@ -36,7 +36,7 @@
   left: -45px;
 }
 
-.nav__item:nth-child(4)::before {
+.secondary-nav__item:nth-child(4) .secondary-nav__link::before {
   @include beforeAfter;
   background-image: url('../img/svg/price.svg');
   width: 37px;
@@ -46,7 +46,27 @@
 
 }
 
-.nav__text {
+.secondary-nav__item:nth-child(1) .secondary-nav__link.active-link::before {
+  background-image: url('../img/svg/phone-red.svg');
+}
+
+.secondary-nav__item:nth-child(2) .secondary-nav__link.active-link::before {
+  background-image: url('../img/svg/location-red.svg');
+}
+
+.secondary-nav__item:nth-child(3) .secondary-nav__link.active-link::before {
+  background-image: url('../img/svg/envelope-red.svg');
+}
+
+.secondary-nav__item:nth-child(4) .secondary-nav__link.active-link::before {
+  background-image: url('../img/svg/price-red.svg');
+}
+
+.secondary-nav__link.active-link {
+  color: $red-text;
+}
+
+.secondary-nav__text {
   margin-left: 2px;
 }
 
@@ -58,11 +78,11 @@
     margin-right: 24%;
   }
 
-  .nav__item {
+  .secondary-nav__item {
     margin-bottom: 23px;
   }
 
-  .nav__item:nth-child(1) {
+  .secondary-nav__item:nth-child(1) .secondary-nav__link {
     order: 4;
 
     &::before {
@@ -74,7 +94,7 @@
 
   }
 
-  .nav__item:nth-child(2) {
+  .secondary-nav__item:nth-child(2) .secondary-nav__link {
     order: 2;
 
     &::before {
@@ -84,7 +104,7 @@
     }
   }
 
-  .nav__item:nth-child(3) {
+  .secondary-nav__item:nth-child(3) .secondary-nav__link {
     order: 3;
 
     &::before {
@@ -94,7 +114,7 @@
     }
   }
 
-  .nav__item:nth-child(4) {
+  .secondary-nav__item:nth-child(4) .secondary-nav__link {
     order: 1;
 
     &::before {

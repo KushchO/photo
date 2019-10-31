@@ -26,6 +26,7 @@
   border: 1px solid transparent;
   border-radius: 2px;
   outline: 0;
+  @include fontMuseoRegular20;
 
   &:active {
     border: 1px solid #E5E5E5;
@@ -42,7 +43,7 @@
 }
 
 .request-form__input::placeholder {
-  @include regular20;
+  @include fontMuseolight20;
 }
 
 @media (max-width: 1400px) {
