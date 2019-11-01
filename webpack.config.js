@@ -2,7 +2,9 @@ const path = require('path');
 
 module.exports = {
 	entry: {
-		main: './src/js/index.js'
+		main: './src/js/index.js',
+		deliveryWithFitting: './src/js/pages/deliveri-with-fitting.js',
+		pvz: './src/js/pages/pvz.js'
 	},
 
 	output: {

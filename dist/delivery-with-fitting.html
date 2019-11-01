@@ -144,7 +144,11 @@
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-  <div class="delivery-range__map-wrapper"><img src="./img/map-range.jpg" alt="" class="delivery-range__map"></div>
+  <div class="delivery-range__map-wrapper">
+    <div id='delivery-range-map' class="delivery-range__map">
+
+    </div>
+  </div>
 </section>
     <section class="request-form ">
   <div class="request-form__wrapper">
@@ -231,7 +235,11 @@
   </div>
 </footer>
     <script src="./js/main.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=207cb5eb-ff96-49c3-848f-21ecfe91f9e2"
+        type="text/javascript"></script>
+    <script src="./js/deliveryWithFitting.min.js"></script>
     <script src="./js/vendor.min.js"></script>
+
 </body>
 
 </html>

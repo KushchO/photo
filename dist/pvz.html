@@ -153,7 +153,9 @@
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-  <div class="delivery-range__map-wrapper"><img src="./img/map-pvz.jpg" alt="" class="delivery-range__map"></div>
+  <div class="delivery-range__map-wrapper">
+    <div id="pvz-map" class="delivery-range__map"></div>
+  </div>
 </section>
   <section class="request-form ">
   <div class="request-form__wrapper">
@@ -241,6 +243,9 @@
   </div>
 </footer>
   <script src="./js/main.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=681cc243-b402-4ad6-9b33-c94252a7984c"
+    type="text/javascript"></script>
+  <script src="./js/pvz.min.js"></script>
   <script src="./js/vendor.min.js"></script>
 </body>
 
