@@ -25,7 +25,7 @@ ymaps.ready(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: '../img/svg/pvz-location.svg',
+				iconImageHref: './img/svg/pvz-location.svg',
 				// Размеры метки.
 				iconImageSize: [48, 48],
 				// Смещение левого верхнего угла иконки относительно
@@ -48,7 +48,7 @@ ymaps.ready(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: '../img/svg/pvz-location.svg',
+				iconImageHref: './img/svg/pvz-location.svg',
 				// Размеры метки.
 				iconImageSize: [48, 48],
 				// Смещение левого верхнего угла иконки относительно
@@ -71,7 +71,7 @@ ymaps.ready(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: '../img/svg/pvz-location.svg',
+				iconImageHref: './img/svg/pvz-location.svg',
 				// Размеры метки.
 				iconImageSize: [48, 48],
 				// Смещение левого верхнего угла иконки относительно
@@ -94,7 +94,7 @@ ymaps.ready(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: '../img/svg/pvz-location.svg',
+				iconImageHref: './img/svg/pvz-location.svg',
 				// Размеры метки.
 				iconImageSize: [48, 48],
 				// Смещение левого верхнего угла иконки относительно
@@ -117,7 +117,7 @@ ymaps.ready(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: '../img/svg/pvz-location.svg',
+				iconImageHref: './img/svg/pvz-location.svg',
 				// Размеры метки.
 				iconImageSize: [48, 48],
 				// Смещение левого верхнего угла иконки относительно
