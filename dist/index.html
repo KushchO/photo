@@ -162,9 +162,9 @@
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-    <div class="main-maps__map-wrapper">
-      <img src="./img/map1.jpg" alt="" class="main-maps__image">
-    </div>
+<div class="main-maps__map-wrapper">
+  <div id="main-map-range" class="main-map__range"></div>
+</div>
   </div>
   <div class="main-maps__item">
     <h2 class="main-maps__title">Пункты выдачи</h2>
@@ -172,9 +172,9 @@
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-    <div class="main-maps__map-wrapper">
-      <img src="./img/map2.jpg" alt="" class="main-maps__image">
-    </div>
+<div class="main-maps__map-wrapper">
+  <div id="main-map-pvz" class="main-map__pvz"></div>
+</div>
   </div>
 </section>
     <section class="request-form ">
@@ -264,6 +264,9 @@
 </section>
     <div class="popup_overlay"></div>
     <script src="./js/main.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=681cc243-b402-4ad6-9b33-c94252a7984c"
+        type="text/javascript"></script>
+    <script src="./js/mainPage.min.js"></script>
     <script src="./js/vendor.min.js"></script>
 </body>
 

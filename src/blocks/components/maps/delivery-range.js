@@ -1,4 +1,3 @@
-import $ from 'jquery';
 ymaps.ready(init);
 
 function init() {

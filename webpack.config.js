@@ -4,7 +4,9 @@ module.exports = {
 	entry: {
 		main: './src/js/index.js',
 		deliveryWithFitting: './src/js/pages/deliveri-with-fitting.js',
-		pvz: './src/js/pages/pvz.js'
+		pvz: './src/js/pages/pvz.js',
+		address: './src/js/pages/address.js',
+		mainPage: './src/js/pages/main-page.js'
 	},
 
 	output: {
