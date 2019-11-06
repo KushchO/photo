@@ -25,8 +25,8 @@
   <link rel="apple-touch-icon" sizes="167x167" href="./img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="./img/favicons/apple-touch-icon-1024x1024.png">
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" media="print" href="./styles/print-address.css">
+  <link rel="stylesheet" href="./styles/main.min.css">
+  <link rel="stylesheet" media="print" href=" ./styles/print-pvz.min.css">
 </head>
 
 <body>
@@ -73,7 +73,7 @@
     <li class="main-nav__item"><a href="prices.html" class="main-nav__link">Цены</a></li>
   </ul>
 </header>
-  <section class="address">
+  <section class="address print">
   <button class="close-element">
 
 </button>
@@ -94,12 +94,18 @@
     <li class="address__item address__item--location">Наш адрес: Москва, 2-я Карачаровская улица, дом 14 А, строение 1,
       офис 403</li>
   </ul>
+  <div class="address-map with-printable">
   <div class="map-buttons">
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-<div class="address__map-wrapper">
-  <div id='address-map' class="address__map"></div>
+  <div class="address__map-wrapper">
+    <div id='address-map' class="address__map printable expandable">
+      <button class="close-element">
+
+</button>
+    </div>
+  </div>
 </div>
 </section>
   <section class="request-form ">
@@ -164,11 +170,12 @@
     <a href="#" class="footer-logo__link"><img src="./img/svg/footer-logo.svg" alt="" class="footer-logo__logo"></a>
   </div>
 </footer>
-  <script src="./js/main.js"></script>
+  <div class="popup_overlay"></div>
+  <script src="./js/main.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=207cb5eb-ff96-49c3-848f-21ecfe91f9e2"
     type="text/javascript"></script>
-  <script src="./js/address.js"></script>
-  <script src="./js/vendor.js"></script>
+  <script src="./js/address.min.js"></script>
+  <script src="./js/vendor.min.js"></script>
 </body>
 
 </html>

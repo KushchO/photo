@@ -1,16 +1,12 @@
+import $ from 'jquery';
+
 ymaps.ready(init);
 
 function init() {
-	var myMap = new ymaps.Map(
-		'main-map-range',
-		{
-			center: [55.76, 37.64],
-			zoom: 9
-		},
-		{
-			restrictMapArea: true
-		}
-	);
+	var myMap = new ymaps.Map('main-map-range', {
+		center: [55.76, 37.64],
+		zoom: 9
+	});
 
 	var myGeoObject = new ymaps.GeoObject(
 		{
@@ -211,4 +207,10 @@ function init() {
 		.add(vesnaPlacemark)
 		.add(savinkaPlacemark)
 		.add(vnukovoPlacemark);
+
+	$(window).click(function() {
+		console.log('!!!');
+		myMap.container.fitToViewport();
+		myMap1.container.fitToViewport();
+	});
 }

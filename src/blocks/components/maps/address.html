@@ -1,7 +1,8 @@
-<div class="address-map">
+<div class="address-map with-printable">
   @@include("../map-buttons/map-buttons.html")
   <div class="address__map-wrapper">
-    <div id='address-map' class="address__map"></div>
+    <div id='address-map' class="address__map printable expandable">
+      @@include("../../components/close-element/close-element.html")
+    </div>
   </div>
-  @@include("./map-popup.html")
 </div>

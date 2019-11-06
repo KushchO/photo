@@ -15,14 +15,23 @@
     width: 100%;
     height: auto;
 
-    .map-buttons {
+
+
+    .map-buttons,
+    .address__manager,
+    .address__list {
       display: none !important;
     }
+
+
   }
 
-  .delivery-range__map-wrapper {
+  .address__map-wrapper {
+    display: flex !important;
     width: 100% !important;
   }
+
+
 }
 
 

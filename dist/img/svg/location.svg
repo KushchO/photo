@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="27.199" height="32.833" viewBox="0 0 27.199 32.833">
-  <g id="Group_413" data-name="Group 413" transform="translate(-766.028 -191.921)">
-    <circle id="Ellipse_53" data-name="Ellipse 53" cx="6" cy="6" r="6" transform="translate(773.628 199.522)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.2"/>
-    <path id="Path_682" data-name="Path 682" d="M788.82,214.714a13,13,0,1,0-18.384,0l9.192,9.192Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.2"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="27.199" height="32.833" viewBox="0 0 27.199 32.833"><g id="Group_413" data-name="Group 413" transform="translate(-766.028 -191.921)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.2"><circle id="Ellipse_53" data-name="Ellipse 53" cx="6" cy="6" r="6" transform="translate(773.628 199.522)"/><path id="Path_682" data-name="Path 682" d="M788.82 214.714a13 13 0 10-18.384 0l9.192 9.192z"/></g></svg>

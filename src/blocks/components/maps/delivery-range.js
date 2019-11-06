@@ -2,7 +2,7 @@ ymaps.ready(init);
 
 function init() {
 	var myMap = new ymaps.Map(
-		'delivery-range-map',
+		'delivery-map-map',
 		{
 			center: [55.76, 37.64],
 			zoom: 10
