@@ -1,0 +1,30 @@
+/*Стили для печати PVZ карты*/
+@media print {
+  body>section {
+    display: none !important;
+  }
+
+  .delivery__header,
+  .delivery-footer {
+    display: none !important;
+  }
+
+  .print {
+    display: flex !important;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+    .map-buttons {
+      display: none !important;
+    }
+  }
+
+  .delivery-range__map-wrapper {
+    width: 100% !important;
+  }
+}
+
+
+
+/*Стили для печати PVZ карты*/

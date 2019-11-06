@@ -10,7 +10,13 @@ const requireDir = require('require-dir'),
 			watch: ['./src/blocks/**/*.html', './src/views/**/*.html']
 		},
 		styles: {
-			src: './src/styles/main.{scss,sass}',
+			src: [
+				'./src/styles/main.{scss,sass}',
+				'./src/styles/print-pvz.{scss,sass}',
+				'./src/styles/print-fitting.{scss,sass}',
+				'./src/styles/print-address.{scss,sass}',
+				'./src/styles/print-main.{scss,sass}'
+			],
 			dist: './dist/styles/',
 			watch: ['./src/blocks/**/*.{scss,sass}', './src/styles/**/*.{scss,sass}']
 		},

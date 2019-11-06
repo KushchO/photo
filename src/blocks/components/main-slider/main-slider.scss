@@ -64,6 +64,7 @@
 
 .slide {
   @include centered;
+  display: flex !important;
   position: relative;
   color: #ffffff;
 }

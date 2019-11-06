@@ -64,6 +64,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "jQuery.print": "^1.5.1",
         "jquery": "^3.4.1",
         "slick": "^1.12.2",
         "slick-carousel": "^1.8.1",

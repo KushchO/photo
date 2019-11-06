@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 67 67"><g id="Group_723" data-name="Group 723" transform="translate(-188.5 -196.5)" fill="#f7f7f7" stroke="#9e1935" stroke-width="3"><circle id="Ellipse_80" data-name="Ellipse 80" cx="32" cy="32" r="32" transform="translate(190 198)" stroke-miterlimit="10"/><path id="Path_1066" data-name="Path 1066" d="M222 237.006l-10.507 6.6 3.027-12.031-9.52-7.958 12.377-.839L222 211.266l4.623 11.512 12.377.839-9.52 7.954 3.027 12.031z" stroke-linejoin="bevel"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 67 67">
+  <g id="Group_723" data-name="Group 723" transform="translate(-188.5 -196.5)">
+    <circle id="Ellipse_80" data-name="Ellipse 80" cx="32" cy="32" r="32" transform="translate(190 198)" fill="#f7f7f7" stroke="#9e1935" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_1066" data-name="Path 1066" d="M222,237.006l-10.507,6.6,3.027-12.031L205,223.617l12.377-.839L222,211.266l4.623,11.512,12.377.839-9.52,7.954,3.027,12.031Z" fill="#f7f7f7" stroke="#9e1935" stroke-linejoin="bevel" stroke-width="3"/>
+  </g>
+</svg>

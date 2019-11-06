@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 90px;
+  position: relative;
 
   .map-buttons {
     margin: 0 auto;
@@ -50,8 +51,25 @@
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
 }
 
-// .ymaps-2-1-74-map {
-// 	filter: grayscale(100%);
-// 	-webkit-filter: grayscale(100);
-// 	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-// }
+.popup__map {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 70vh;
+  background: #fefefe;
+  z-index: 10001;
+  padding: 4%;
+
+
+}
+
+.popup__map--closed {
+  display: none;
+}
+
+.popup__map--open {
+  display: block;
+}

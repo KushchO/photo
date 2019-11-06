@@ -29,7 +29,8 @@
     <link rel="apple-touch-icon" sizes="167x167" href="./img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="./img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" media="print" href="./styles/print-main.css">
 </head>
 
 <body>
@@ -168,12 +169,14 @@
   </div>
   <div class="main-maps__item">
     <h2 class="main-maps__title">Пункты выдачи</h2>
-    <div class="map-buttons">
+    <div class="main-maps__">
+  <div class="map-buttons">
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
 </div>
-<div class="main-maps__map-wrapper">
-  <div id="main-map-pvz" class="main-map__pvz"></div>
+  <div class="main-maps__map-wrapper">
+    <div id="main-map-pvz" class="main-map__pvz"></div>
+  </div>
 </div>
   </div>
 </section>
@@ -263,11 +266,11 @@
   </div>
 </section>
     <div class="popup_overlay"></div>
-    <script src="./js/main.min.js"></script>
+    <script src="./js/main.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=681cc243-b402-4ad6-9b33-c94252a7984c"
         type="text/javascript"></script>
-    <script src="./js/mainPage.min.js"></script>
-    <script src="./js/vendor.min.js"></script>
+    <script src="./js/mainPage.js"></script>
+    <script src="./js/vendor.js"></script>
 </body>
 
 </html>

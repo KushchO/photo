@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20.2" viewBox="0 0 23.2 20.2"><g id="Group_625" data-name="Group 625" transform="translate(-338.4 -847.4)" fill="none" stroke="#1665b4" stroke-miterlimit="10" stroke-width="1.2"><path id="Rectangle_153" data-name="Rectangle 153" transform="translate(343 848)" d="M0 0h14v4H0z"/><path id="Rectangle_154" data-name="Rectangle 154" transform="translate(343 858)" d="M0 0h14v9H0z"/><path id="Path_1015" data-name="Path 1015" d="M343 862h-4v-10h22v10h-4"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20.2" viewBox="0 0 23.2 20.2">
+  <g id="Group_625" data-name="Group 625" transform="translate(-338.4 -847.4)">
+    <rect id="Rectangle_153" data-name="Rectangle 153" width="14" height="4" transform="translate(343 848)" fill="none" stroke="#1665b4" stroke-miterlimit="10" stroke-width="1.2"/>
+    <rect id="Rectangle_154" data-name="Rectangle 154" width="14" height="9" transform="translate(343 858)" fill="none" stroke="#1665b4" stroke-miterlimit="10" stroke-width="1.2"/>
+    <path id="Path_1015" data-name="Path 1015" d="M343,862h-4V852h22v10h-4" fill="none" stroke="#1665b4" stroke-miterlimit="10" stroke-width="1.2"/>
+  </g>
+</svg>
