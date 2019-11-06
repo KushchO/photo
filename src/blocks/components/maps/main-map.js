@@ -209,7 +209,6 @@ function init() {
 		.add(vnukovoPlacemark);
 
 	$(window).click(function() {
-		console.log('!!!');
 		myMap.container.fitToViewport();
 		myMap1.container.fitToViewport();
 	});

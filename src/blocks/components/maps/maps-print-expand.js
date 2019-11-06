@@ -16,15 +16,8 @@ $(function() {
 		const printableBlock = item.querySelector('.printable');
 		const closeElement = item.querySelector('.close-element');
 		closeElement.classList.add('close-element--hidden');
-		console.log(closeElement);
-		printButton.addEventListener('click', () => {
+		function openPopup(item) {
 			item.classList.add('print');
-			window.print();
-			item.classList.remove('print');
-		});
-
-		showButton.addEventListener('click', () => {
-			console.log(window);
 			printableBlock.classList.add('expanded');
 			closeElement.classList.remove('close-element--hidden');
 			closeElement.classList.add('close-element--visible');
@@ -32,26 +25,37 @@ $(function() {
 			$(window).resize(function() {
 				resize();
 			});
+		}
+
+		function closePopup(item) {
+			item.classList.remove('print');
+			printableBlock.classList.remove('expanded');
+			closeElement.classList.add('close-element--hidden');
+			closeElement.classList.remove('close-element--visible');
+			overlay.classList.remove('popup_overlay--visible');
+			$(window).resize(function() {
+				resize();
+			});
+		}
+
+		printButton.addEventListener('click', () => {
+			openPopup(item);
+			setTimeout(function() {
+				window.print();
+				closePopup(item);
+			}, 500);
+		});
+
+		showButton.addEventListener('click', () => {
+			openPopup(item);
 		});
 
 		overlay.addEventListener('click', () => {
-			printableBlock.classList.remove('expanded');
-			closeElement.classList.add('close-element--hidden');
-			closeElement.classList.remove('close-element--visible');
-			overlay.classList.remove('popup_overlay--visible');
-			$(window).resize(function() {
-				resize();
-			});
+			closePopup(item);
 		});
 
 		closeElement.addEventListener('click', () => {
-			printableBlock.classList.remove('expanded');
-			closeElement.classList.add('close-element--hidden');
-			closeElement.classList.remove('close-element--visible');
-			overlay.classList.remove('popup_overlay--visible');
-			$(window).resize(function() {
-				resize();
-			});
+			closePopup(item);
 		});
 	});
 });
