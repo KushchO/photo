@@ -37,6 +37,6 @@ ymaps.ready(function() {
 				iconContentLayout: MyIconContentLayout
 			}
 		);
-
+	myMap.behaviors.disable('scrollZoom');
 	myMap.geoObjects.add(officePlacemark);
 });

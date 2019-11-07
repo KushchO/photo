@@ -72,6 +72,6 @@ function init() {
 			strokeWidth: 3
 		}
 	);
-
+	myMap.behaviors.disable('scrollZoom');
 	myMap.geoObjects.add(myGeoObject);
 }

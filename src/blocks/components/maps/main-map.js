@@ -208,6 +208,9 @@ function init() {
 		.add(savinkaPlacemark)
 		.add(vnukovoPlacemark);
 
+	myMap.behaviors.disable('scrollZoom');
+	myMap1.behaviors.disable('scrollZoom');
+
 	$(window).click(function() {
 		myMap.container.fitToViewport();
 		myMap1.container.fitToViewport();
