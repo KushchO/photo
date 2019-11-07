@@ -1,72 +1,72 @@
 .delivery__header {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 /*Верхняя часть с лого и ссылками */
 .header-top__wrapper {
-	padding-top: 53px;
-	width: 100%;
-	background-color: $light-gray;
+  padding-top: 53px;
+  width: 100%;
+  background-color: $light-gray;
 }
 
 .header-top {
-	@include centered;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 30px;
-	box-sizing: border-box;
-	background-color: $light-gray;
+  @include centered;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  background-color: $light-gray;
 }
 
 .header-top__logo {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
 @media (max-width: 1400px) {
-	.header-top {
-		padding-left: 0.5%;
-		padding-right: 0.5%;
-	}
+  .header-top {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
 }
 
 /* Промо строка*/
 
 .header__promo {
-	display: flex;
-	background-color: #544c58;
-	padding: 4px 0;
+  display: flex;
+  background-color: #544c58;
+  padding: 4px 0;
 
-	.promo__wrapper {
-		@include centered;
-		justify-content: center;
-	}
+  .promo__wrapper {
+    @include centered;
+    justify-content: center;
+  }
 
-	.promo__text {
-		@include fontMuseoRegular20;
-		color: #ffffff;
-		margin-top: 20px;
-		margin-left: 48px;
-		letter-spacing: 0.4px;
-		position: relative;
+  .promo__text {
+    @include fontMuseolight20;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 48px;
+    letter-spacing: 0.4px;
+    position: relative;
 
-		&::before {
-			@include beforeAfter;
-			background-image: url('../img/svg/like.svg');
-			width: 26px;
-			height: 57px;
-			top: -3px;
-			left: -35px;
-		}
-	}
+    &::before {
+      @include beforeAfter;
+      background-image: url('../img/svg/like.svg');
+      width: 26px;
+      height: 57px;
+      top: -3px;
+      left: -35px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
-	.header__promo {
-		padding-left: 1.5%;
-		padding-right: 1.5%;
-		text-align: center;
-	}
+  .header__promo {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    text-align: center;
+  }
 }
 
 /* Промо строка*/
@@ -74,25 +74,25 @@
 /* Главное меню в Хедере */
 
 .main-nav__list {
-	@include centered;
-	justify-content: center;
-	padding: 37px 0;
+  @include centered;
+  justify-content: center;
+  padding: 37px 0;
 }
 
 .main-nav__item {
-	padding-left: 32px;
-	padding-right: 31px;
-	@include fontMuseoRegular22;
-	letter-spacing: 0.4px;
+  padding-left: 32px;
+  padding-right: 31px;
+  @include fontMuseoRegular22;
+  letter-spacing: 0.4px;
 }
 
 .main-nav__item:not(:first-child) {
-	background-image: url('../img/separator.png');
-	background-repeat: no-repeat;
+  background-image: url('../img/separator.png');
+  background-repeat: no-repeat;
 }
 
 .main-nav__link.active-link {
-	color: $red-text;
+  color: $red-text;
 }
 
 /* Главное меню в Хедере */
