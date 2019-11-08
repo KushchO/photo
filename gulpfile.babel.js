@@ -10,13 +10,7 @@ const requireDir = require('require-dir'),
 			watch: ['./src/blocks/**/*.html', './src/views/**/*.html']
 		},
 		styles: {
-			src: [
-				'./src/styles/main.{scss,sass}',
-				'./src/styles/print-pvz.{scss,sass}',
-				'./src/styles/print-fitting.{scss,sass}',
-				'./src/styles/print-address.{scss,sass}',
-				'./src/styles/print-main.{scss,sass}'
-			],
+			src: ['./src/styles/main.{scss,sass}', './src/styles/print.{scss,sass}'],
 			dist: './dist/styles/',
 			watch: ['./src/blocks/**/*.{scss,sass}', './src/styles/**/*.{scss,sass}']
 		},
@@ -61,6 +55,11 @@ const requireDir = require('require-dir'),
 		gzip: {
 			src: './src/.htaccess',
 			dist: './dist/'
+		},
+		videos: {
+			src: './src/videos/*.mp4',
+			dist: './dist/videos/',
+			watch: './src/videos/*.mp4'
 		}
 	};
 
@@ -79,7 +78,8 @@ export const development = gulp.series(
 		'webp',
 		'sprites',
 		'fonts',
-		'favicons'
+		'favicons',
+		'videos'
 	]),
 	gulp.parallel('serve')
 );
@@ -95,7 +95,8 @@ export const prod = gulp.series(
 		'sprites',
 		'fonts',
 		'favicons',
-		'gzip'
+		'gzip',
+		'videos'
 	])
 );
 

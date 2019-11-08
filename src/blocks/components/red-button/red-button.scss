@@ -1,0 +1,16 @@
+.red-button {
+  color: #ffffff;
+  background: #9E1935;
+  border: 1px solid $dark-gray;
+  border-radius: 4px;
+  display: block;
+  @include fontMuseoRegular22;
+
+  &:hover {
+    background: $button-hoover-red;
+  }
+
+  &:focus {
+    background: $button-focus-red;
+  }
+}

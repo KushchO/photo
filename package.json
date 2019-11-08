@@ -68,6 +68,7 @@
         "jquery": "^3.4.1",
         "slick": "^1.12.2",
         "slick-carousel": "^1.8.1",
-        "smart-grid": "^2.1.2"
+        "smart-grid": "^2.1.2",
+        "video.js": "^7.6.5"
     }
 }

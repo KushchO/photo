@@ -32,14 +32,8 @@
 }
 
 .advantages__button {
-  @include fontMuseoRegular22;
   margin: 28px auto 0;
   padding: 15px 10px;
   display: block;
   min-width: 32.5%;
-  color: #ffffff;
-  background: #9E1935;
-  border: 1px solid $dark-gray;
-  border-radius: 2px;
-
 }

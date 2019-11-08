@@ -41,6 +41,13 @@
 /*BLOCKS END*/
 
 /*Микисины шрифтов :BEGIN*/
+@mixin fontMuseoLight15 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
 @mixin light17 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 17px;
@@ -109,6 +116,13 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 26px;
+}
+
+@mixin fontMuseoLightlight26 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 28px;
 }
 
 @mixin light27 {

@@ -1,0 +1,42 @@
+.mini-slider__wrapper {
+
+  .slick-dots {
+    width: auto;
+    bottom: -26px;
+    left: 41%;
+
+    li button {
+      width: 15px;
+      height: 15px;
+    }
+
+    .slick-active {
+      opacity: 1;
+    }
+  }
+
+  .slick-dots li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $mini-slider-dots;
+    opacity: 0.3;
+    margin: 0 4px;
+  }
+}
+
+.video-js {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  video {
+    width: 100%;
+    height: 312px;
+    position: relative;
+  }
+}
+
+.vjs-text-track-display {
+  display: none;
+}
