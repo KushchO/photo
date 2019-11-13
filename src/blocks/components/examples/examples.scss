@@ -1,0 +1,111 @@
+.examples {
+  @include centered;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.examples__slider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .owl-item {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 36% !important;
+    }
+  }
+}
+.examples__title {
+  @include fontMuseoLight44;
+  text-align: center;
+}
+
+.examples__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 37px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.examples__button {
+  @include fontMuseolight18;
+  padding: 13px 3.55%;
+  border: none;
+  box-sizing: border-box;
+  background-color: $button-light-gray;
+  border-radius: 6px;
+
+  &--active {
+    background-color: $button-active-grey;
+    color: #ffffff;
+  }
+}
+
+.owl-nav {
+  display: block !important;
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+}
+.owl-dots {
+  display: none;
+}
+
+.owl-nav span {
+  font-size: 0px;
+  position: absolute;
+  width: 20px;
+  height: 44px;
+  background-image: url("../img/svg/arrow-black.svg") !important;
+}
+.owl-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 112px;
+  background-image: url("../img/button-back.png") !important;
+  bottom: 240px;
+  position: relative;
+}
+
+.owl-prev {
+  left: -0.5%;
+  top: -19px;
+}
+.owl-next {
+  top: -131px;
+  right: -91%;
+  span {
+    transform: rotate(180deg);
+    left: 47%;
+  }
+}
+
+.examples__nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 4.1%;
+  padding-top: 40px;
+
+  .active {
+    border: 1px solid #000000;
+  }
+}
+
+.examples__nav-link {
+  display: block;
+  position: relative;
+  width: 7%;
+}
+
+.examples__nav-img {
+  width: 100%;
+  height: auto;
+}

@@ -66,9 +66,15 @@
     "dependencies": {
         "jQuery.print": "^1.5.1",
         "jquery": "^3.4.1",
+        "owl.carousel": "^2.3.4",
         "slick": "^1.12.2",
         "slick-carousel": "^1.8.1",
         "smart-grid": "^2.1.2",
-        "video.js": "^7.6.5"
+        "tiny-slider": "^2.9.2",
+        "video.js": "^7.6.5",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.7.2",
+        "vue-owl-carousel": "^2.0.3",
+        "vue-template-compiler": "^2.6.10"
     }
 }
