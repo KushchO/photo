@@ -153,6 +153,13 @@
   line-height: 38px;
 }
 
+@mixin fontMuseoThin40 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 50px;
+}
+
 @mixin thin44 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 44px;

@@ -1,0 +1,34 @@
+.photos {
+  @include centered;
+  flex-direction: column;
+  position: relative;
+}
+
+.photos__item {
+  padding-bottom: 70px;
+}
+
+.photos__title {
+  @include fontMuseoThin40;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.photos__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photos__photo {
+  position: relative;
+  width: 15.2%;
+}
+
+.photos__picture {
+  width: 100%;
+  position: relative;
+}
+
+.photos__img {
+  width: 100%;
+}
