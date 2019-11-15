@@ -16,6 +16,11 @@
   background-repeat: no-repeat;
 }
 
+@mixin picture {
+  position: relative;
+  width: 100%;
+}
+
 @mixin light-gray-block-before {
   width: 64px;
   height: 64px;
@@ -41,6 +46,13 @@
 /*BLOCKS END*/
 
 /*Микисины шрифтов :BEGIN*/
+@mixin fontMuseoLight12 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+}
+
 @mixin fontMuseoLight15 {
   font-family: 'Museo Sans', sans-serif;
   font-size: 15px;
@@ -173,6 +185,13 @@
   font-weight: 300;
   line-height: 60px;
   text-align: center;
+}
+
+@mixin pageTitleLight50 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 60px;
 }
 
 @mixin pageTitleThin50 {

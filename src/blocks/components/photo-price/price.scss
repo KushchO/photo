@@ -1,0 +1,77 @@
+.price {
+  @include centered;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.price__title {
+  @include pageTitleLight50;
+}
+
+.price__header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price__header-title {
+  @include fontMuseolight20;
+  line-height: 30px;
+  padding-right: 11.9%;
+  padding-left: 1.5%;
+}
+
+.price__row {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.price__picture {
+  width: 9%;
+  position: relative;
+}
+
+.price__img {
+  width: 100%;
+}
+
+.price__description,
+.price__price-less30,
+.price__price-more30 {
+  background: $light-gray;
+}
+
+.price__description {
+  width: 32.5%;
+  @include fontMuseoBold24;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1%;
+  padding-top: 30px;
+  padding-left: 2.2%;
+  padding-right: 5.5%;
+  letter-spacing: .45px;
+  line-height: 34px;
+}
+
+.price__container {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  margin-left: 1%;
+  padding-top: 37px;
+  padding-left: 2.2%;
+  padding-right: 1.5%;
+  box-sizing: border-box;
+}
+
+.price__price {
+  @include fontMuseoLight24;
+  padding-bottom: 15px;
+}
+
+.price__annotation {
+  @include fontMuseoLight12;
+  line-height: 17px;
+}
