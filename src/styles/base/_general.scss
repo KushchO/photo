@@ -1,8 +1,8 @@
 body {
-	@include light17;
-	position: relative;
-	max-width: 100vw;
-	overflow-x: hidden;
+  @include light17;
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h2,
@@ -11,49 +11,50 @@ h4,
 h5,
 h6,
 ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-	@include container();
-	@include sm(max-width, rem(510));
-	@include md(max-width, rem(690));
-	@include lg(max-width, rem(930));
-	@include xl(max-width, rem(1110));
+  @include container();
+  @include sm(max-width, rem(510));
+  @include md(max-width, rem(690));
+  @include lg(max-width, rem(930));
+  @include xl(max-width, rem(1110));
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	color: #000;
-	text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 c {
-	display: none;
+  display: none;
 }
 
 .mobile-br {
-	display: none;
+  display: none;
 }
 
 .desktop-br {
-	display: block;
+  display: block;
 }
 
 picture img {
-	display: block;
+  display: block;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-	.mobile-br {
-		display: block;
-	}
+  .mobile-br {
+    display: block;
+  }
 
-	.desktop-br {
-		display: none;
-	}
+  .desktop-br {
+    display: none;
+  }
 }
