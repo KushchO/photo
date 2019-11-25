@@ -27,17 +27,22 @@
   border-radius: 2px;
   outline: 0;
   @include fontMuseoRegular20;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.02);
 
   &:active {
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
   }
 
   &:focus {
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
+
+    &::placeholder {
+      font-weight: 500;
+    }
   }
 
   &:hover {
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     outline: 0;
   }
 }
@@ -46,14 +51,45 @@
   @include fontMuseolight20;
 }
 
+.request-form__input {}
+
 @media (max-width: 1400px) {
   .request-form__input {
     width: 29.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
   }
 
   .request-form__wrapper {
     box-sizing: border-box;
     padding-left: 1%;
     padding-right: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  .request-form__fieldset {
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .request-form__title {
+    margin-bottom: 5.7vw;
+  }
+
+  .request-form__input {
+    width: 100%;
+    padding: 0;
+    padding-left: 4vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    margin-bottom: 4vw;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 4.267vw;
+      line-height: 5.5vw;
+    }
   }
 }

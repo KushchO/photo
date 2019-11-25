@@ -1,7 +1,9 @@
 <section class="top-info-block">
   @@include("../close-element/close-element.html")
   <h2 class="top-info-block__title">Упаковка</h2>
-  <picture><img src="./img/package.jpg" srcset="./img/package@2x.jpg 2x" alt="Доставка с примеркой"
+  <picture>
+    <source media="(max-width: 768px)" srcset="./img/packing_M.jpg 1x, ./img/packing_M@2x.jpg 2x">
+    <img src="./img/package.jpg" srcset="./img/package@2x.jpg 2x" alt="Доставка с примеркой"
       class="top-info-block__image"></picture>
   <div class="top-info-block__info">
     <h3 class="top-info-block__sub-title">Процесс</h3>

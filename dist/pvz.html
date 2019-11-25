@@ -33,7 +33,13 @@
   <header class="delivery__header">
   <div class="header-top__wrapper">
     <div class="header-top">
-      <a href="./"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
+      <button class="header-top__burger"></button>
+      <a href="./">
+        <picture class="header-top__logo-picture">
+          <source media="(max-width: 768px)" srcset="./img/svg/logo_M.svg">
+          <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+        </picture>
+      </a>
       <ul class="secondary-nav">
   <li class="secondary-nav__item">
     <a href="#" class="secondary-nav__link" alt="Телефон">
@@ -57,6 +63,25 @@
     </a>
   </li>
 </ul>
+      <button class="header-top__phone"></button>
+      <section class="mobile-menu visually-hidden">
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close"></button>
+    <span class="mobile-menu__phone">8-905-779-62-32</span>
+  </div>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="delivery-with-fitting.html" class="mobile-menu__link">
+        Доставка с примеркой
+      </a>
+    </li>
+    <li class="mobile-menu__item"><a href="pvz.html" class="mobile-menu__link">Пункты выдачи заказов</a></li>
+    <li class="mobile-menu__item"><a href="package.html" class="mobile-menu__link">Упаковка</a></li>
+    <li class="mobile-menu__item"><a href="prices.html" class="mobile-menu__link">Цены</a></li>
+    <li class="mobile-menu__item"><a href="address.html" class="mobile-menu__link">Адрес</a></li>
+    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Задать вопрос</a></li>
+  </ul>
+</section>
     </div>
   </div>
   <div class="header__promo">
@@ -79,8 +104,11 @@
 
 </button>
   <h2 class="top-info-block__title">Пункты выдачи заказов</h2>
-  <picture><img src="./img/pvz-wide.jpg" srcset="./img/pvz-wide@2x.jpg 2x" alt="Доставка с примеркой"
-      class="top-info-block__image"></picture>
+  <picture>
+    <source media="(max-width: 768px)" srcset="./img/pvz-3_M.jpg 1x, ./img/pvz-3_M@2x.jpg 2x">
+    <img src="./img/pvz-wide.jpg" srcset="./img/pvz-wide@2x.jpg 2x" alt="Доставка с примеркой"
+      class="top-info-block__image">
+  </picture>
   <div class="top-info-block__info">
     <h3 class="top-info-block__sub-title">Как устроен сервис</h3>
     <p class="top-info-block__text">Клиенты вашего онлайн-магазина могут самостоятельно забрать свой заказ в одном из
@@ -98,8 +126,10 @@
   <p class="moscow-pvz__additional-info">В данный момент можно воспользоваться 5 пунктами в Москве и области</p>
   <div class="moscow-pvz__addresses">
     <div class="moscow-pvz__pvz">
-      <picture class="moscow-pvz__pic"><img src="./img/gum.jpg" srcset="./img/gum@2x.jpg" alt="ГУМ"
-          class="moscow-pvz__image"></picture>
+      <picture class="moscow-pvz__pic">
+        <source media="(max-width: 768px)" srcset="./img/gum_M.jpg 1x, ./img/gum_M@2x.jpg 2x">
+        <img src="./img/gum.jpg" srcset="./img/gum@2x.jpg" alt="ГУМ" class="moscow-pvz__image">
+      </picture>
       <div class="moscow-pvz__info">
         <h2 class="moscow-pvz__mall">ГУМ</h2>
         <p class="moscow-pvz__address">Красная площадь, 3,<br> ГУМ, 2 этаж, 1 линия
@@ -108,7 +138,9 @@
       </div>
     </div>
     <div class="moscow-pvz__pvz">
-      <picture class="moscow-pvz__pic"><img src="./img/smolenka.jpg" srcset="./img/smolenka@2x.jpg" alt="Смоленский
+      <picture class="moscow-pvz__pic">
+        <source media="(max-width: 768px)" srcset="./img/smolenka_M.jpg 1x, ./img/smolenka_M@2x.jpg 2x">
+        <img src="./img/smolenka.jpg" srcset="./img/smolenka@2x.jpg" alt="Смоленский
         Пассаж" class="moscow-pvz__image"></picture>
       <div class="moscow-pvz__info">
         <h2 class="moscow-pvz__mall">Смоленский<br>Пассаж
@@ -118,8 +150,9 @@
       </div>
     </div>
     <div class="moscow-pvz__pvz">
-      <picture class="moscow-pvz__pic"><img src="./img/vesna.jpg" srcset="./img/vesna@2x.jpg" alt="ТЦ ВЕСНА"
-          class="moscow-pvz__image"></picture>
+      <picture class="moscow-pvz__pic">
+        <source media="(max-width: 768px)" srcset="./img/vesna_M.jpg 1x, ./img/vesna_M@2x.jpg 2x">
+        <img src="./img/vesna.jpg" srcset="./img/vesna@2x.jpg" alt="ТЦ ВЕСНА" class="moscow-pvz__image"></picture>
       <div class="moscow-pvz__info">
         <h2 class="moscow-pvz__mall">ВЕСНА</h2>
         <p class="moscow-pvz__address">Новый Арбат, 19</p>
@@ -127,8 +160,9 @@
       </div>
     </div>
     <div class="moscow-pvz__pvz">
-      <picture class="moscow-pvz__pic"><img src="./img/savvinka.jpg" srcset="./img/savvinka@2x.jpg" alt="Саввинка"
-          class="moscow-pvz__image"></picture>
+      <picture class="moscow-pvz__pic">
+        <source media="(max-width: 768px)" srcset="./img/savvinka_M.jpg 1x, ./img/savvinka_M@2x.jpg 2x">
+        <img src="./img/savvinka.jpg" srcset="./img/savvinka@2x.jpg" alt="Саввинка" class="moscow-pvz__image"></picture>
       <div class="moscow-pvz__info">
         <h2 class="moscow-pvz__mall">Саввинка</h2>
         <p class="moscow-pvz__address">Саввинская наб, 12,
@@ -137,8 +171,9 @@
       </div>
     </div>
     <div class="moscow-pvz__pvz">
-      <picture class="moscow-pvz__pic"><img src="./img/vnukovo.jpg" srcset="./img/vnukovo@2x.jpg"
-          alt="Vnukovo Outlet Village" class="
+      <picture class="moscow-pvz__pic">
+        <source media="(max-width: 768px)" srcset="./img/vnukovo_M.jpg 1x, ./img/vnukovo_M@2x.jpg 2x">
+        <img src="./img/vnukovo.jpg" srcset="./img/vnukovo@2x.jpg" alt="Vnukovo Outlet Village" class="
           moscow-pvz__image"></picture>
       <div class="moscow-pvz__info">
         <h2 class="moscow-pvz__mall">Vnukovo Outlet Village</h2>
@@ -150,7 +185,7 @@
   </div>
 </section>
   <section class="delivery-map print with-printable">
-  <h2 class="delivery-map__title">Пункты на карте</h2>
+  <h2 class="delivery-map__title">Пункты выдачи на карте</h2>
   <div class="map-buttons">
   <button class="map-buttons__button map-buttons__button--expand">Развернуть</button>
   <button class="map-buttons__button map-buttons__button--print">На печать</button>
@@ -184,25 +219,27 @@
       условиями <a class="request-form__link">соглашения</a></p>
   </div>
 </section>
-  <section class="info-block">
+  <section class="info-block small-slider">
   <div class="info-block__item">
     <picture class="info-block__pic">
+      <source media="(max-width: 768px)" srcset="./img/delivery_car_M.jpg 1x, ./img/delivery_car_M@2x.jpg 2x">
       <img class="info-block__image" src="./img/delivery_car.jpg" srcset="./img/delivery_car@2x.jpg 2x"
         alt="Пункты выдачи">
-      </pictire>
-      <h3 class="info-block__title">Доставка с примеркой</h3>
-      <p class="info-block__text">Самостоятельно заберем заказы ваших покупателей,
-        аккуратно упакуем и доставим по адресу в срок</p>
-      <a href="#" class="info-block__link button-more">Подробнее</a>
+    </picture>
+    <h3 class="info-block__title">Доставка с примеркой</h3>
+    <p class="info-block__text">Самостоятельно заберем заказы ваших покупателей,
+      аккуратно упакуем и доставим по адресу в срок</p>
+    <a href="#" class="info-block__link button-more">Подробнее</a>
   </div>
   <div class="info-block__item">
-    <pictire class="info-block__pic">
+    <picture class="info-block__pic">
+      <source media="(max-width: 768px)" srcset="./img/pvz1_M.jpg 1x, ./img/pvz1_M@2x.jpg 2x">
       <img class="info-block__image" src="./img/store1.jpg" srcset="./img/store1@2x.jpg 2x" alt="Упаковка">
-      </picture>
-      <h3 class="info-block__title">Упаковка</h3>
-      <p class="info-block__text">Бережно оформим каждый заказ, предложив различные варианты упаковки, в соответствии с
-        габаритами и типом товара</p>
-      <a href="#" class="info-block__link button-more">Подробнее</a>
+    </picture>
+    <h3 class="info-block__title">Упаковка</h3>
+    <p class="info-block__text">Бережно оформим каждый заказ, предложив различные варианты упаковки, в соответствии с
+      габаритами и типом товара</p>
+    <a href="#" class="info-block__link button-more">Подробнее</a>
   </div>
 </section>
   <footer class="delivery-footer">

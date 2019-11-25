@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <g id="Group_879" data-name="Group 879" transform="translate(-168.5 -1198.5)">
+    <path id="Path_1231" data-name="Path 1231" d="M169,1203.846V1199h4.846" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_74" data-name="Line 74" x2="3" y2="3" transform="translate(171 1201)" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_876" data-name="Group 876">
+      <path id="Path_1232" data-name="Path 1232" d="M183,1208.154V1213h-4.846" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_75" data-name="Line 75" x1="3" y1="3" transform="translate(178 1208)" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <path id="Path_1233" data-name="Path 1233" d="M178.154,1199H183v4.846" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_76" data-name="Line 76" x1="3" y2="3" transform="translate(178 1201)" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_877" data-name="Group 877">
+      <path id="Path_1234" data-name="Path 1234" d="M173.846,1213H169v-4.846" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_77" data-name="Line 77" y1="3" x2="3" transform="translate(171 1208)" fill="none" stroke="#767676" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

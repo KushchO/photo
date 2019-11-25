@@ -23,6 +23,11 @@
   margin-left: 5px;
 }
 
+.header-top__burger,
+.header-top__phone {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   .header-top {
     padding-left: 0.5%;
@@ -95,4 +100,69 @@
   color: $red-text;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 /* Главное меню в Хедере */
+
+/*Главное меню в Хедере - моибильная вреися: BEGIN*/
+
+@media (max-width: 768px) {
+  .header-top__wrapper {
+    padding-top: 4vw;
+    padding-bottom: 5vw;
+  }
+
+  .header-top {
+    padding-bottom: 0;
+  }
+
+  .secondary-nav {
+    display: none;
+  }
+
+  .header-top__burger,
+  .header-top__phone {
+    @include mobile-button;
+    top: 5vw;
+  }
+
+  .header-top__burger {
+    background-image: url(../img/svg/burger.svg);
+    left: 5vw;
+  }
+
+  .header-top__phone {
+    background-image: url(../img/svg/phone_M.svg);
+    right: 5vw;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .main-slider {
+    padding-top: 0;
+  }
+
+  .header__promo .promo__text {
+    margin-top: 2.5vw;
+    margin-left: 14vw;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    text-align: left;
+    margin-bottom: 3vw;
+
+    &::before {
+      top: 1vw;
+      left: -9vw;
+    }
+  }
+}
+
+/*Главное меню в Хедере - моибильная вреися: END*/

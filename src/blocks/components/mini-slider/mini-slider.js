@@ -25,37 +25,40 @@ $(document).ready(function() {
 		slidesToScroll: 1
 	});
 
-	const player = videojs('my-player', {
-		controls: false, // включить кнопки на плеере
-		autoplay: false, // Автозапуск
-		preload: 'auto', // Загрузка видео
-		loop: true, // Повтор видео
-		sourceOrder: true,
-		paused: true,
-		sources: [
-			{
-				src: './videos/video.mp4',
-				type: 'video/mp4'
-			}
-		],
-		techOrder: ['html5']
-	});
-	const poster = document.querySelector('.about__poster');
 	const video = document.querySelector('#my-player');
-	console.log(player);
-	console.log(player.paused());
+	if (video) {
+		const player = videojs('my-player', {
+			controls: false, // включить кнопки на плеере
+			autoplay: false, // Автозапуск
+			preload: 'auto', // Загрузка видео
+			loop: true, // Повтор видео
+			sourceOrder: true,
+			paused: true,
+			sources: [
+				{
+					src: './videos/video.mp4',
+					type: 'video/mp4'
+				}
+			],
+			techOrder: ['html5']
+		});
+		const poster = document.querySelector('.about__poster');
 
-	if (video && poster) {
-		poster.addEventListener('click', () => {
-			poster.classList.add('about__poster--hidden');
-			player.play();
-		});
-		video.addEventListener('click', function() {
-			if (player.paused()) {
+		console.log(player);
+		console.log(player.paused());
+
+		if (video && poster) {
+			poster.addEventListener('click', () => {
+				poster.classList.add('about__poster--hidden');
 				player.play();
-				return;
-			}
-			player.pause();
-		});
+			});
+			video.addEventListener('click', function() {
+				if (player.paused()) {
+					player.play();
+					return;
+				}
+				player.pause();
+			});
+		}
 	}
 });

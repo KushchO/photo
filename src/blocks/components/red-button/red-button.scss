@@ -6,11 +6,19 @@
   display: block;
   @include fontMuseoRegular22;
 
+
   &:hover {
     background: $button-hoover-red;
   }
 
   &:focus {
     background: $button-focus-red;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .red-button {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.02);
   }
 }

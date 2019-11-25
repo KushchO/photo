@@ -61,11 +61,10 @@
   max-width: 1280px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50.1%, -50.1%);
   opacity: 0;
   z-index: 105000;
   transition: all 1s ease 0s;
-  ;
 
   &::before {
     display: none;
@@ -82,5 +81,105 @@
     top: 20px;
     left: unset;
   }
+}
 
+
+
+@media (max-width: 768px) {
+  .request-form {
+    margin: 0;
+    padding-top: 10vw;
+    padding-bottom: 7vw;
+
+    &::before {
+      @include mobile-block-before-icon;
+    }
+  }
+
+  .request-form__form {
+    padding: 0 5.5vw;
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+  }
+
+  .request-form__title {
+    @include mobile-middle-title;
+    margin-bottom: 0;
+  }
+
+  .request-form__info {
+    display: none;
+  }
+
+  .request-form__submit {
+    @include fontMuseoBold16;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 4.25vw;
+    line-height: 3vw;
+    margin-bottom: 5vw;
+  }
+
+  .request-form__sub-info {
+    margin: 0;
+    font-size: 3.5vw;
+    line-height: 5.8vw;
+  }
+
+  .request-form__question {
+    display: none;
+  }
+
+  .request-form__popup {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 9vw 5.5vw;
+
+    .close-element {
+      @include mobile-close-element;
+      top: 7vw;
+      right: 7vw;
+    }
+
+    .request-form__title {
+      font-size: 9.066vw;
+      font-weight: 100;
+      text-align: left;
+      padding-left: 0;
+      line-height: 10.5vw;
+      margin-top: -2vw;
+    }
+
+    .request-form__info {
+      text-align: left;
+      font-weight: 300;
+      font-size: 4vw;
+      line-height: 6.5vw;
+      margin-top: -2vw;
+      margin-bottom: 6vw;
+    }
+
+    .request-form__fieldset {
+      padding-bottom: 1vw;
+      width: 100%;
+      font-size: 4vw;
+    }
+
+    .request-form__question {
+      display: block;
+      padding: 2vw 4vw 7vw;
+      width: 100%;
+      letter-spacing: 0;
+      font-size: 4.267vw;
+      margin-bottom: 5vw;
+      color: $gray-input-text;
+    }
+
+    .request-form_sub-info {
+      font-size: 3.467vw;
+      padding: 0 2.5vw;
+      margin: 0;
+    }
+  }
 }

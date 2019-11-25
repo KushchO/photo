@@ -33,7 +33,13 @@
   <header class="delivery__header">
   <div class="header-top__wrapper">
     <div class="header-top">
-      <a href="./"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
+      <button class="header-top__burger"></button>
+      <a href="./">
+        <picture class="header-top__logo-picture">
+          <source media="(max-width: 768px)" srcset="./img/svg/logo_M.svg">
+          <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+        </picture>
+      </a>
       <ul class="secondary-nav">
   <li class="secondary-nav__item">
     <a href="#" class="secondary-nav__link" alt="Телефон">
@@ -57,6 +63,25 @@
     </a>
   </li>
 </ul>
+      <button class="header-top__phone"></button>
+      <section class="mobile-menu visually-hidden">
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close"></button>
+    <span class="mobile-menu__phone">8-905-779-62-32</span>
+  </div>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="delivery-with-fitting.html" class="mobile-menu__link">
+        Доставка с примеркой
+      </a>
+    </li>
+    <li class="mobile-menu__item"><a href="pvz.html" class="mobile-menu__link">Пункты выдачи заказов</a></li>
+    <li class="mobile-menu__item"><a href="package.html" class="mobile-menu__link">Упаковка</a></li>
+    <li class="mobile-menu__item"><a href="prices.html" class="mobile-menu__link">Цены</a></li>
+    <li class="mobile-menu__item"><a href="address.html" class="mobile-menu__link">Адрес</a></li>
+    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Задать вопрос</a></li>
+  </ul>
+</section>
     </div>
   </div>
   <div class="header__promo">
@@ -79,7 +104,9 @@
 
 </button>
   <h2 class="top-info-block__title">Упаковка</h2>
-  <picture><img src="./img/package.jpg" srcset="./img/package@2x.jpg 2x" alt="Доставка с примеркой"
+  <picture>
+    <source media="(max-width: 768px)" srcset="./img/packing_M.jpg 1x, ./img/packing_M@2x.jpg 2x">
+    <img src="./img/package.jpg" srcset="./img/package@2x.jpg 2x" alt="Доставка с примеркой"
       class="top-info-block__image"></picture>
   <div class="top-info-block__info">
     <h3 class="top-info-block__sub-title">Процесс</h3>
@@ -92,23 +119,26 @@
   </div>
 </section>
   <section class="points">
-  <h2 class="points__topic-title">Тезисы</h2>
+  <h2 class="points__topic-title">Преимущества</h2>
   <div class="points__wrapper">
     <div class="points__item points__item--time">
-      <h4 class="points__title">Тезис 1</h4>
-      <span class="points__text">Быстро делаем</span>
+      <h4 class="points__title">Наименование</h4>
+      <span class="points__text">Задача посвящена созданию сервиса отдельной доставки для интернет-магазинов</span>
     </div>
     <div class="points__item points__item--box">
-      <h4 class="points__title">Тезис 2</h4>
-      <span class="points__text">Много делаем</span>
+      <h4 class="points__title">Наименование</h4>
+      <span class="points__text">Задача посвящена созданию сервиса отдельной доставки для интернет-магазинов
+      </span>
     </div>
     <div class="points__item points__item--cup">
-      <h4 class="points__title">Тезис 3</h4>
-      <span class="points__text">Качественно делаем</span>
+      <h4 class="points__title">Наименование</h4>
+      <span class="points__text">Задача посвящена созданию сервиса отдельной доставки для интернет-магазинов
+      </span>
     </div>
     <div class="points__item points__item--medal">
-      <h4 class="points__title">Тезис 4</h4>
-      <span class="points__text">Все довольны</span>
+      <h4 class="points__title">Наименование</h4>
+      <span class="points__text">Задача посвящена созданию сервиса отдельной доставки для интернет-магазинов
+      </span>
     </div>
   </div>
 </section>
@@ -131,6 +161,29 @@
     <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в соответствии
       с
       условиями <a class="request-form__link">соглашения</a></p>
+  </div>
+</section>
+  <section class="info-block small-slider">
+  <div class="info-block__item">
+    <picture class="info-block__pic">
+      <source media="(max-width: 768px)" srcset="./img/pvz1_M.jpg 1x, ./img/pvz1_M@2x.jpg 2x">
+      <img class="info-block__image" src="./img/pvz1.jpg" srcset="./img/pvz1@2x.jpg 2x" alt="Пункты выдачи">
+    </picture>
+    <h3 class="info-block__title">Пункты выдачи</h3>
+    <p class="info-block__text">Ваши клиенты могут забрать свои заказы из наших пунктов выдачи, расположенных в разных
+      районах Москвы</p>
+    <a href="" class="info-block__link button-more">Подробнее</a>
+  </div>
+  <div class="info-block__item">
+    <picture class="info-block__pic">
+      <source media="(max-width: 768px)" srcset="./img/delivery_car_M.jpg 1x, ./img/delivery_car_M@2x.jpg 2x">
+      <img class="info-block__image" src="./img/delivery_car.jpg" srcset="./img/delivery_car@2x.jpg 2x"
+        alt="Пункты выдачи">
+    </picture>
+    <h3 class="info-block__title">Доставка с примеркой</h3>
+    <p class="info-block__text">Самостоятельно заберем заказы ваших покупателей,
+      аккуратно упакуем и доставим по адресу в срок</p>
+    <a href="#" class="info-block__link button-more">Подробнее</a>
   </div>
 </section>
   <footer class="delivery-footer">

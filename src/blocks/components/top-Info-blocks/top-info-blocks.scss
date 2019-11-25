@@ -1,40 +1,86 @@
 .top-info-block {
-  @include centered;
-  flex-direction: column;
-  padding-top: 10px;
-  position: relative;
-  padding-bottom: 100px;
-  box-sizing: border-box;
+	@include centered;
+	flex-direction: column;
+	padding-top: 10px;
+	position: relative;
+	padding-bottom: 100px;
+	box-sizing: border-box;
 
-  .close-element {
-    right: 3px;
-    top: 33px;
-  }
+	.close-element {
+		right: 3px;
+		top: 33px;
+	}
 }
 
 .top-info-block__image {
-  width: 100%;
+	width: 100%;
 }
 
 .top-info-block__title {
-  @include pageTitleThin50;
-  padding-bottom: 35px;
+	@include pageTitleThin50;
+	padding-bottom: 35px;
 }
 
 .top-info-block__info {
-  background-color: $light-gray;
-  border-radius: 8px;
+	background-color: $light-gray;
+	border-radius: 8px;
 }
 
 .top-info-block__sub-title {
-  @include fontMuseoLight44;
-  padding-top: 45px;
-  text-align: center;
+	@include fontMuseoLight44;
+	padding-top: 45px;
+	text-align: center;
 }
 
 .top-info-block__text {
-  @include fontMuseolight20;
-  padding: 0 6.5%;
-  text-align: center;
-  line-height: 33px;
+	@include fontMuseolight20;
+	padding: 0 6.5%;
+	text-align: center;
+	line-height: 33px;
+}
+
+@media (max-width: 768px) {
+	.top-info-block {
+		padding-bottom: 7vw;
+
+		.close-element {
+			@include mobile-close-element;
+			top: 6vw;
+			right: 6.5vw;
+		}
+	}
+
+	.top-info-block__title {
+		font-size: 9.067vw;
+		padding-left: 5.5vw;
+		line-height: 11vw;
+		padding-top: 3vw;
+		padding-bottom: 6vw;
+	}
+
+	.top-info-block__picture {
+		height: 100%;
+
+		img {
+			height: auto;
+			display: block;
+		}
+	}
+
+	.top-info-block__info {
+		padding: 2vw 5.5vw 9vw;
+	}
+
+	.top-info-block__sub-title {
+		padding-top: 2vw;
+		font-size: 6.9334vw;
+	}
+
+	.top-info-block__text {
+		margin-top: 0;
+		font-size: 4vw;
+		padding: 0;
+		line-height: 6.5vw;
+		padding-top: 1vw;
+	}
 }

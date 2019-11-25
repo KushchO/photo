@@ -1,8 +1,11 @@
 <section class="top-info-block">
   @@include("../close-element/close-element.html")
   <h2 class="top-info-block__title">Пункты выдачи заказов</h2>
-  <picture><img src="./img/pvz-wide.jpg" srcset="./img/pvz-wide@2x.jpg 2x" alt="Доставка с примеркой"
-      class="top-info-block__image"></picture>
+  <picture>
+    <source media="(max-width: 768px)" srcset="./img/pvz-3_M.jpg 1x, ./img/pvz-3_M@2x.jpg 2x">
+    <img src="./img/pvz-wide.jpg" srcset="./img/pvz-wide@2x.jpg 2x" alt="Доставка с примеркой"
+      class="top-info-block__image">
+  </picture>
   <div class="top-info-block__info">
     <h3 class="top-info-block__sub-title">Как устроен сервис</h3>
     <p class="top-info-block__text">Клиенты вашего онлайн-магазина могут самостоятельно забрать свой заказ в одном из

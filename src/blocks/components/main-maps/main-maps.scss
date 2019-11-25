@@ -1,29 +1,59 @@
 .main-maps {
-  @include centered;
-  text-align: center;
-  padding-top: 50px;
-  justify-content: space-between;
-  padding-bottom: 60px;
-  position: relative;
+	@include centered;
+	text-align: center;
+	padding-top: 50px;
+	justify-content: space-between;
+	padding-bottom: 60px;
+	position: relative;
 }
 
 .main-maps__item {
-  width: 49%;
-  position: relative;
+	width: 49%;
+	position: relative;
 }
 
 .main-maps__title {
-  @include fontMuseolight32;
-  margin-bottom: 25px;
+	@include fontMuseolight32;
+	margin-bottom: 25px;
 }
 
-
 .main-maps__map-wrapper {
-  padding-top: 25px;
-  width: 100%;
-  position: relative;
+	padding-top: 25px;
+	width: 100%;
+	position: relative;
 }
 
 .main-maps__image {
-  width: 100%;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.main-maps {
+		flex-direction: column;
+		padding-top: 2vw;
+		padding-bottom: 10vw;
+	}
+
+	.main-maps__item {
+		width: unset;
+		max-width: 100%;
+		padding-left: 4.5vw;
+		padding-right: 4.5vw;
+
+		.main-map__range,
+		.main-map__pvz {
+			height: 95vw;
+			padding-bottom: 2vw;
+		}
+	}
+
+	.main-maps__map-wrapper {
+		margin-top: 0vw;
+		padding-top: 4vw;
+	}
+
+	.main-maps__title {
+		font-size: 6.1333vw;
+		margin-bottom: 2vw;
+	}
 }

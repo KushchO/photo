@@ -39,7 +39,13 @@
   <header class="delivery__header">
   <div class="header-top__wrapper">
     <div class="header-top">
-      <a href="./"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
+      <button class="header-top__burger"></button>
+      <a href="./">
+        <picture class="header-top__logo-picture">
+          <source media="(max-width: 768px)" srcset="./img/svg/logo_M.svg">
+          <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+        </picture>
+      </a>
       <ul class="secondary-nav">
   <li class="secondary-nav__item">
     <a href="#" class="secondary-nav__link" alt="Телефон">
@@ -63,6 +69,25 @@
     </a>
   </li>
 </ul>
+      <button class="header-top__phone"></button>
+      <section class="mobile-menu visually-hidden">
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close"></button>
+    <span class="mobile-menu__phone">8-905-779-62-32</span>
+  </div>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="delivery-with-fitting.html" class="mobile-menu__link">
+        Доставка с примеркой
+      </a>
+    </li>
+    <li class="mobile-menu__item"><a href="pvz.html" class="mobile-menu__link">Пункты выдачи заказов</a></li>
+    <li class="mobile-menu__item"><a href="package.html" class="mobile-menu__link">Упаковка</a></li>
+    <li class="mobile-menu__item"><a href="prices.html" class="mobile-menu__link">Цены</a></li>
+    <li class="mobile-menu__item"><a href="address.html" class="mobile-menu__link">Адрес</a></li>
+    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Задать вопрос</a></li>
+  </ul>
+</section>
     </div>
   </div>
   <div class="header__promo">

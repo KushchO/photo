@@ -33,7 +33,13 @@
   <header class="delivery__header">
   <div class="header-top__wrapper">
     <div class="header-top">
-      <a href="./"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
+      <button class="header-top__burger"></button>
+      <a href="./">
+        <picture class="header-top__logo-picture">
+          <source media="(max-width: 768px)" srcset="./img/svg/logo_M.svg">
+          <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+        </picture>
+      </a>
       <ul class="secondary-nav">
   <li class="secondary-nav__item">
     <a href="#" class="secondary-nav__link" alt="Телефон">
@@ -57,6 +63,25 @@
     </a>
   </li>
 </ul>
+      <button class="header-top__phone"></button>
+      <section class="mobile-menu visually-hidden">
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close"></button>
+    <span class="mobile-menu__phone">8-905-779-62-32</span>
+  </div>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="delivery-with-fitting.html" class="mobile-menu__link">
+        Доставка с примеркой
+      </a>
+    </li>
+    <li class="mobile-menu__item"><a href="pvz.html" class="mobile-menu__link">Пункты выдачи заказов</a></li>
+    <li class="mobile-menu__item"><a href="package.html" class="mobile-menu__link">Упаковка</a></li>
+    <li class="mobile-menu__item"><a href="prices.html" class="mobile-menu__link">Цены</a></li>
+    <li class="mobile-menu__item"><a href="address.html" class="mobile-menu__link">Адрес</a></li>
+    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Задать вопрос</a></li>
+  </ul>
+</section>
     </div>
   </div>
   <div class="header__promo">
@@ -78,21 +103,24 @@
   <button class="close-element">
 
 </button>
-  <h2 class="address__title">Адрес офиса службы доставки</h2>
+  <h2 class="address__title">Адрес офиса<br class="mobile-br"> службы доставки</h2>
   <div class="address__manager">
     <picture class="address__pic">
-      <img src="./img/dionis.jpg" srcset="./img/dionis@2x.jpg 2x" alt="" class="address__photo">
+      <source media="(max-width: 768px)" srcset="./img/evgeny_M.jpg 1x, ./img/evgeny_M@2x.jpg 2x">
+      <img src="./img/evgeny.jpg" srcset="./img/evgeny@2x.jpg 2x" alt="" class="address__photo">
     </picture>
     <div class="address__profile">
-      <span class="address__name">Денис Борзунов</span>
+      <span class="address__name">Евгений Зайцев</span>
       <span class="address__position">Руководитель курьерской службы</span>
     </div>
   </div>
   <ul class="address__list">
-    <li class="address__item address__item--mail">Предложения и вопросы вы можете присылать по адресу:
-      d.borzunov@boscoonline.ru</li>
+    <li class="address__item address__item--mail">Предложения и вопросы<br class="mobile-br"> вы можете присылать по
+      адресу:
+      name@boscoonline.ru</li>
     <li class="address__item address__item--phone">Телефон: <b>7-966-142-55-57</b></li>
-    <li class="address__item address__item--location">Наш адрес: Москва, 2-я Карачаровская улица, дом 14 А, строение 1,
+    <li class="address__item address__item--location">Наш адрес: Москва,<br class="mobile-br"> 2-я Карачаровская
+      улица,<br class="mobile-br"> дом 14 А, строение 1,
       офис 403</li>
   </ul>
   <div class="address-map with-printable">
@@ -123,7 +151,8 @@
 </div>
       <button class="request-form__submit red-button">Отправить заявку</button>
     </form>
-    <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в соответствии
+    <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в
+      соответствии<br class="mobile-br">
       с
       условиями <a class="request-form__link">соглашения</a></p>
   </div>

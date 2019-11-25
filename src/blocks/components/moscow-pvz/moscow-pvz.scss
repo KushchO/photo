@@ -1,71 +1,120 @@
 .moscow-pvz {
-  @include centered;
-  flex-direction: column;
-  box-sizing: border-box;
+	@include centered;
+	flex-direction: column;
+	box-sizing: border-box;
 }
 
 .moscow-pvz__title {
-  @include fontMuseoLight44;
+	@include fontMuseoLight44;
 }
 
 .moscow-pvz__additional-info {
-  @include fontMuseoLight24;
-  text-align: center;
+	@include fontMuseoLight24;
+	text-align: center;
 }
 
 .moscow-pvz__addresses {
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .moscow-pvz__pvz {
-  margin-bottom: 10px;
-  width: 49%;
-  display: flex;
-  background-color: $block;
-  position: relative;
+	margin-bottom: 10px;
+	width: 49%;
+	display: flex;
+	background-color: $block;
+	position: relative;
 }
 
 .moscow-pvz__pic {
-  width: 38.5%;
-  min-width: 38.5%;
-  position: relative;
+	width: 38.5%;
+	min-width: 38.5%;
+	position: relative;
 }
 
 .moscow-pvz__image {
-  width: 100%;
+	width: 100%;
 }
 
 .moscow-pvz__info {
-  padding-top: 30px;
-  padding-left: 5%;
-  padding-bottom: 35px;
-  max-width: 61.5%;
-  display: flex;
-  flex-direction: column;
+	padding-top: 30px;
+	padding-left: 5%;
+	padding-bottom: 35px;
+	max-width: 61.5%;
+	display: flex;
+	flex-direction: column;
 }
 
 .moscow-pvz__mall {
-  @include fontMuseoBold24;
+	@include fontMuseoBold24;
 }
 
 .moscow-pvz__address {
-  @include fontMuseoLight24;
-  line-height: 32px;
-  margin: 0;
-  padding-top: 10px;
+	@include fontMuseoLight24;
+	line-height: 32px;
+	margin: 0;
+	padding-top: 10px;
 }
 
 .moscow-pvz__link {
-  margin-top: auto;
-  color: $blue-link;
+	margin-top: auto;
+	color: $blue-link;
 }
 
 @media (max-width: 1350px) {
-  .moscow-pvz {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
+	.moscow-pvz {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+}
+
+@media (max-width: 768px) {
+	.moscow-pvz {
+		padding-left: 4.2vw;
+		padding-right: 4.2vw;
+		padding-top: 7vw;
+	}
+
+	.moscow-pvz__addresses {
+		flex-direction: column;
+		padding-top: 6vw;
+	}
+
+	.moscow-pvz__pvz {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+
+	.moscow-pvz__title {
+		font-size: $m-title-L;
+		line-height: 14vw;
+	}
+
+	.moscow-pvz__additional-info {
+		font-size: $m-text-s;
+		margin: 0;
+	}
+
+	.moscow-pvz__mall {
+		font-size: $m-text-xs;
+		line-height: 5vw;
+	}
+
+	.moscow-pvz__address {
+		font-size: $m-text-xs;
+		padding-top: 0;
+		line-height: 6vw;
+	}
+
+	.moscow-pvz__info {
+		padding-top: 3.5vw;
+		padding-left: 3.5vw;
+		padding-bottom: 4vw;
+	}
+
+	.moscow-pvz__link {
+		font-size: $m-text-xxs;
+	}
 }

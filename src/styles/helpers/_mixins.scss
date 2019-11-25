@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 /*BLOCKS BEGIN*/
 
 @mixin beforeAfter {
@@ -43,6 +42,37 @@
   position: relative;
 }
 
+@mixin mobile-button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  width: 37px;
+  height: 37px;
+  position: relative;
+}
+
+@mixin mobile-block-before-icon {
+  width: 11vw;
+  height: 11vw;
+  background-size: 11vw 11vw;
+  left: 45%;
+  top: -5vw;
+}
+
+@mixin mobile-middle-title {
+  font-size: 6.9335vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  line-height: 9.5vw;
+  margin-bottom: 4.7vw;
+}
+
+@mixin mobile-close-element {
+  width: 5.5vw;
+  height: 5.5vw;
+  background-size: 5.5vw 5.5vw;
+}
+
 /*BLOCKS END*/
 
 /*Микисины шрифтов :BEGIN*/
@@ -71,6 +101,13 @@
   font-family: 'Museo Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
+  line-height: 18px;
+}
+
+@mixin fontMuseoBold16 {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 18px;
 }
 

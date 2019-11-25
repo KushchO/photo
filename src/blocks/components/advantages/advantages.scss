@@ -37,3 +37,41 @@
   display: block;
   min-width: 32.5%;
 }
+
+@media (max-width: 768px) {
+  .advantages {
+    margin: 0;
+    padding-top: 10vw;
+    padding-bottom: 13vw;
+
+    &::before {
+      width: 11vw;
+      height: 11vw;
+      background-size: 11vw 11vw;
+      left: 45%;
+      top: -5vw;
+    }
+  }
+
+  .advantages__title {
+    @include mobile-middle-title;
+  }
+
+  .advantages__text {
+    font-size: 4.265vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    line-height: 6.5vw;
+  }
+
+  .advantages__button {
+    max-width: 100%;
+    margin: 0 5vw;
+    max-width: 100%;
+    margin: 0 7vw;
+    font-size: 4.25vw;
+    line-height: 4.5vw;
+    margin-top: 7vw;
+  }
+
+}

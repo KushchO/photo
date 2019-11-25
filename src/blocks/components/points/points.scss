@@ -1,70 +1,114 @@
 .points {
-  @include centered;
-  flex-direction: column;
-  padding-bottom: 95px;
-  box-sizing: border-box;
+	@include centered;
+	flex-direction: column;
+	padding-bottom: 95px;
+	box-sizing: border-box;
 }
 
 .points__topic-title {
-  @include fontMuseoLight44;
-  text-align: center;
-  padding-bottom: 50px;
+	@include fontMuseoLight44;
+	text-align: center;
+	padding-bottom: 50px;
 }
 
 .points__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .points__item {
-  box-sizing: border-box;
-  max-width: 49%;
-  width: 49%;
-  padding-top: 95px;
-  padding-left: 13%;
-  padding-bottom: 85px;
-  background-color: $block;
-  margin-bottom: 15px;
-  position: relative;
+	box-sizing: border-box;
+	max-width: 49%;
+	width: 49%;
+	padding-top: 95px;
+	padding-left: 13%;
+	padding-bottom: 85px;
+	background-color: $block;
+	margin-bottom: 15px;
+	position: relative;
 
-  &::before {
-    @include beforeAfter;
-    width: 77px;
-    height: 80px;
-    top: 30px;
-    left: 6%;
-  }
+	&::before {
+		@include beforeAfter;
+		width: 77px;
+		height: 80px;
+		top: 30px;
+		left: 6%;
+	}
 }
 
 .points__item--time::before {
-  background-image: url('../img/svg/time.svg');
+	background-image: url('../img/svg/time.svg');
 }
 
 .points__item--box::before {
-  background-image: url('../img/svg/box.svg');
+	background-image: url('../img/svg/box.svg');
 }
 
 .points__item--cup::before {
-  background-image: url('../img/svg/cup.svg');
+	background-image: url('../img/svg/cup.svg');
 }
 
 .points__item--medal::before {
-  background-image: url('../img/svg/medal.svg');
+	background-image: url('../img/svg/medal.svg');
 }
 
 .points__title {
-  @include fontMuseoBold24;
-  padding-bottom: 10px;
+	@include fontMuseoBold24;
+	padding-bottom: 10px;
 }
 
 .points__text {
-  @include fontMuseoLight24;
+	@include fontMuseoLight24;
 }
 
 @media (max-width: 1350px) {
-  .points {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
+	.points {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+}
+@media (max-width: 768px) {
+	.points {
+		padding-left: 1%;
+		padding-right: 1%;
+		padding-bottom: 12vw;
+	}
+
+	.points__topic-title {
+		font-size: $m-title-L;
+		padding-bottom: 2vw;
+	}
+
+	.points__wrapper {
+		flex-direction: column;
+		padding: 0 4.2vw;
+	}
+
+	.points__item {
+		width: 100%;
+		max-width: unset;
+		padding-top: 4vw;
+		padding-left: 17vw;
+		padding-bottom: 4vw;
+		margin-bottom: 5vw;
+
+		&::before {
+			width: 8.5vw;
+			height: 9.5vw;
+			background-size: 8.5vw;
+			left: 4vw;
+			top: 5vw;
+		}
+	}
+
+	.points__title {
+		padding-bottom: 0;
+	}
+
+	.points__title,
+	.points__text {
+		font-size: $m-text-xs;
+		line-height: 6vw;
+	}
 }

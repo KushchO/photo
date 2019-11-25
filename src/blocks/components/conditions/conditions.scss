@@ -1,41 +1,77 @@
 .conditions {
-  @include centered;
-  position: relative;
-  justify-content: space-between;
-  padding-bottom: 78px;
+	@include centered;
+	position: relative;
+	justify-content: space-between;
+	padding-bottom: 78px;
 }
 
 .conditions__item {
-  text-align: center;
-  @include light-gray-block-narrow;
-  width: 49%;
-  padding-top: 58px;
+	text-align: center;
+	@include light-gray-block-narrow;
+	width: 49%;
+	padding-top: 58px;
 
-  &::before {
-    @include beforeAfter;
-    width: 58px;
-    height: 58px;
-    left: 46%;
-    top: -30px;
-  }
+	&::before {
+		@include beforeAfter;
+		width: 58px;
+		height: 58px;
+		left: 46%;
+		top: -30px;
+	}
 }
 
 .conditions__item--yes::before {
-  background-image: url('../img/svg/green_check.svg');
+	background-image: url('../img/svg/green_check.svg');
 }
 
 .conditions__item--no::before {
-  background-image: url('../img/svg/red_no.svg');
+	background-image: url('../img/svg/red_no.svg');
 }
 
 .conditions__title {
-  @include fontMuseolight32;
+	@include fontMuseolight32;
 }
 
 .conditions__text {
-  @include fontMuseoLight22;
-  padding: 0 7%;
-  padding-top: 32px;
-  margin: 0;
-  line-height: 32px;
+	@include fontMuseoLight22;
+	padding: 0 7%;
+	padding-top: 32px;
+	margin: 0;
+	line-height: 32px;
+}
+
+@media (max-width: 768px) {
+	.conditions {
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+
+	.conditions__item {
+		width: 100%;
+		padding-top: 7vw;
+		padding-bottom: 11vw;
+	}
+
+	.conditions__item:not(:last-child) {
+		margin-bottom: 10vw;
+	}
+
+	.conditions__item::before {
+		left: 44%;
+		top: -5vw;
+		width: 10.5vw;
+		height: 10.5vw;
+		background-size: 10.5vw;
+	}
+
+	.conditions__title {
+		font-size: 5.867vw;
+	}
+
+	.conditions__text {
+		font-size: 4.267vw;
+		line-height: 7vw;
+		padding: 0 2vw;
+		padding-top: 2vw;
+	}
 }

@@ -37,7 +37,13 @@
     <header class="delivery__header">
   <div class="header-top__wrapper">
     <div class="header-top">
-      <a href="./"><img src="./img/svg/logo.svg" alt="" class="header-top__logo"></a>
+      <button class="header-top__burger"></button>
+      <a href="./">
+        <picture class="header-top__logo-picture">
+          <source media="(max-width: 768px)" srcset="./img/svg/logo_M.svg">
+          <img src="./img/svg/logo.svg" alt="" class="header-top__logo">
+        </picture>
+      </a>
       <ul class="secondary-nav">
   <li class="secondary-nav__item">
     <a href="#" class="secondary-nav__link" alt="Телефон">
@@ -61,6 +67,25 @@
     </a>
   </li>
 </ul>
+      <button class="header-top__phone"></button>
+      <section class="mobile-menu visually-hidden">
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close"></button>
+    <span class="mobile-menu__phone">8-905-779-62-32</span>
+  </div>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="delivery-with-fitting.html" class="mobile-menu__link">
+        Доставка с примеркой
+      </a>
+    </li>
+    <li class="mobile-menu__item"><a href="pvz.html" class="mobile-menu__link">Пункты выдачи заказов</a></li>
+    <li class="mobile-menu__item"><a href="package.html" class="mobile-menu__link">Упаковка</a></li>
+    <li class="mobile-menu__item"><a href="prices.html" class="mobile-menu__link">Цены</a></li>
+    <li class="mobile-menu__item"><a href="address.html" class="mobile-menu__link">Адрес</a></li>
+    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Задать вопрос</a></li>
+  </ul>
+</section>
     </div>
   </div>
   <div class="header__promo">
@@ -81,42 +106,54 @@
     <section class="main-slider slider-wrapper">
   <div class="slider__wrapper">
     <div class="slider__slide-wrapper slide">
-      <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      <picture class="slider__picture">
+        <source media="(max-width: 768px)" type="image/jpg"
+          srcset="./img/main-slider/slider_img1_M.jpg, ./img/main-slider/slider_img1_M@2x.jpg 2x">
+        <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      </picture>
       <div class="slider__info">
-        <h2 class="slider__title">Съёмка одежды<br>
-          и Московской области
+        <h2 class="slider__title">Доставка по Москве<br class="mobile-br">
+          и Московской области<br class="mobile-br">
           с примеркой</h2>
         <a href="#" class="slider__link">Подробнее</a>
       </div>
     </div>
     <div class="slider__slide-wrapper slide">
-      <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      <picture class="slider__picture">
+        <source media="(max-width: 768px)" type="image/jpg"
+          srcset="./img/main-slider/slider_img1_M.jpg, ./img/main-slider/slider_img1_M@2x.jpg 2x">
+        <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      </picture>
       <div class="slider__info">
-        <h2 class="slider__title">Доставка по Москве
-          и Московской области
+        <h2 class="slider__title">Доставка по Москве<br class="mobile-br">
+          и Московской области<br class="mobile-br">
           с примеркой</h2>
         <a href="#" class="slider__link">Подробнее</a>
       </div>
     </div>
     <div class="slider__slide-wrapper slide">
-      <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      <picture class="slider__picture">
+        <source media="(max-width: 768px)" type="image/jpg"
+          srcset="./img/main-slider/slider_img1_M.jpg, ./img/main-slider/slider_img1_M@2x.jpg 2x">
+        <img src="./img/main-slider/slider_img1.png" alt="" class="slider__image">
+      </picture>
       <div class="slider__info">
-        <h2 class="slider__title">Доставка по Москве
-          и Московской области
+        <h2 class="slider__title">Доставка по Москве<br class="mobile-br">
+          и Московской области<br class="mobile-br">
           с примеркой</h2>
         <a href="#" class="slider__link">Подробнее</a>
       </div>
     </div>
   </div>
 </section>
-    <section class="about">
+    <section class="about small-slider">
   <div class="about-wrapper">
     <div class="about__item">
       <picture>
         <img src="./img/delivery.jpg" srcset="./img/delivery@2x.jpg 2x" alt="" class="about__image">
       </picture>
       <h3 class="about__title">Доставка с примеркой</h3>
-      <p class="about__text">Самостоятельно заберем заказы ваших&nbsp;покупателей, аккуратно упакуем и доставим
+      <p class="about__text">Самостоятельно заберем заказы ваших покупателей, аккуратно упакуем и доставим
         по адресу в срок</p>
       <a href="" class="about__link button-more">Подробнее</a>
     </div>
@@ -204,7 +241,8 @@
 </div>
       <button class="request-form__submit red-button">Отправить заявку</button>
     </form>
-    <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в соответствии
+    <p class="request-form__sub-info">Нажимая кнопку, вы даёте согласие на обработку персональных данных в
+      соответствии<br class="mobile-br">
       с
       условиями <a class="request-form__link">соглашения</a></p>
   </div>
@@ -257,7 +295,7 @@
 
 </button>
   <div class="request-form__wrapper">
-    <h2 class="request-form__title">Заявка на доставку </h2>
+    <h2 class="request-form__title">Заявка<br class="mobile-br"> на доставку</h2>
     <p class="request-form__info">Будем рады подробнее рассказать о нашем сервисе и ответить на вопросы
     </p>
     <form action="" class="request-form_form">

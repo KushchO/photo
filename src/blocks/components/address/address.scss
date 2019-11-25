@@ -81,3 +81,84 @@
 		padding-right: 1%;
 	}
 }
+
+@media (max-width: 768px) {
+	.address {
+		box-sizing: border-box;
+		padding-top: 7.5vw;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 13.5vw;
+		.close-element {
+			@include mobile-close-element;
+			top: 6vw;
+			right: 6.5vw;
+		}
+	}
+
+	.address__title {
+		padding-left: 5vw;
+		padding-bottom: 3vw;
+		font-size: $m-title-xl;
+		line-height: 11vw;
+	}
+
+	.address__manager {
+		width: 100%;
+		padding: 0 4vw;
+		padding-top: 4vw;
+		box-sizing: border-box;
+	}
+
+	.address__profile {
+		padding-left: 5vw;
+	}
+
+	.address__name {
+		font-size: $m-title-xs;
+	}
+
+	.address__profile {
+		padding-top: 1vw;
+		padding-left: 5vw;
+		padding-right: 10vw;
+	}
+
+	.address__position {
+		font-size: $m-text-m;
+		line-height: 7.8vw;
+		padding-top: 0;
+	}
+
+	.address__list {
+		padding-top: 8vw;
+		padding-bottom: 1vw;
+	}
+
+	.address__item {
+		font-size: $m-text-s;
+		padding-left: 16vw;
+		padding-top: 1vw;
+		padding-right: 10vw;
+		margin-bottom: 5.5vw;
+
+		&::before {
+			width: 9.5vw;
+			height: 9.5vw;
+			background-size: 9.5vw;
+			left: 3.5vw;
+			top: 0vw;
+		}
+	}
+
+	.address__map-wrapper {
+		padding-top: 5vw;
+		box-sizing: border-box;
+		padding: 0 4vw;
+	}
+
+	.address__map {
+		height: 93vw;
+		padding-top: 4vw;
+	}
+}
