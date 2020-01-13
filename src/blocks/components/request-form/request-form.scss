@@ -4,6 +4,7 @@
   padding-top: 60px;
   padding-bottom: 55px;
   position: relative;
+  margin-top: 80px;
 
   &::before {
     @include beforeAfter;
@@ -180,6 +181,61 @@
       font-size: 3.467vw;
       padding: 0 2.5vw;
       margin: 0;
+    }
+  }
+}
+
+/*Стили для Паншетов: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .request-form {
+    margin-top: 0;
+    padding-top: 25px;
+    padding-bottom: 1vw;
+
+    &::before {
+      @include sectionIcon;
+    }
+  }
+
+  .request-form__title {
+    font-size: $t-title-m;
+    line-height: 4vw;
+  }
+
+  .request-form__info {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: $t-text-m1;
+  }
+
+  .request-form__fieldset {
+    padding-top: 0.2vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 1.8vw;
+  }
+
+  .request-form__submit {
+    font-size: $t-text-m;
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+    width: 29%;
+  }
+
+  .request-form__sub-info {
+    font-size: $t-text-xs;
+  }
+
+  .request-form .request-form__question {
+    margin-left: 5vw;
+    width: 80.75vw;
+    height: 5.5vw;
+    margin-top: -1vw;
+    padding: 1vw;
+    margin-bottom: 2vw;
+
+    &::placeholder {
+      font-size: $t-text-m;
     }
   }
 }

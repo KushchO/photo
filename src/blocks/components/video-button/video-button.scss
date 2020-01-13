@@ -1,0 +1,13 @@
+.video-button {
+  @include beforeAfter;
+  display: block;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translate(-50%);
+  top: 38%;
+  width: 67px;
+  height: 67px;
+  background-image: url(../img/svg/play.svg);
+}

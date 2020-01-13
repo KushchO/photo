@@ -6,10 +6,20 @@
   background-image: url('../img/svg/close.svg');
   background-size: 30px 30px;
   background-color: transparent;
+  background-repeat: no-repeat;
   border: none;
   right: 20px;
   top: 20px;
   left: unset;
+
+  &--popup {
+    background-image: url('../img/svg/close-popup.svg');
+    width: 94px;
+    height: 94px;
+    background-size: 94px 94px;
+    right: 3vw;
+    top: 3vw;
+  }
 }
 
 .close-element--hidden {

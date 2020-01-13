@@ -192,3 +192,70 @@
     width: 100%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .contract__wrapper {
+    padding-top: 1vw;
+    margin-left: 13vw;
+    padding-bottom: 2vw;
+  }
+
+  .contract__link {
+    font-size: $t-text-m;
+    line-height: 2vw;
+    letter-spacing: -0.01vw;
+    padding-left: 0;
+
+    &::before {
+      width: 1.8vw;
+      height: 1.8vw;
+      background-size: 1.8vw;
+      left: -2.5vw;
+    }
+
+    &::after {
+      width: 7vw;
+      height: 9vw;
+      background-size: 7vw 9vw;
+      top: 1vw;
+      left: -11vw;
+    }
+  }
+
+  .contract__label {
+    font-size: $t-text-xs;
+    padding-top: 0.25vw;
+    margin-left: -3vw;
+  }
+
+  .footer__lists {
+    padding: 1vw 6.25vw 1vw;
+  }
+
+  .footer_list {
+    font-size: $t-text-m;
+    padding-top: 1vw;
+  }
+
+  .footer__item {
+    margin-bottom: .5vw;
+  }
+
+  .footer__link--alone {
+    line-height: 2vw;
+  }
+
+  .footer__link--alone span {
+    margin-bottom: 0;
+  }
+
+  .footer-logo__link {
+    width: 17.5vw;
+    padding-left: 0vw;
+    padding-top: 1vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}

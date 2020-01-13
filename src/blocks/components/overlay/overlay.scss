@@ -15,3 +15,9 @@
 .popup_overlay--visible {
   display: block;
 }
+
+.popup_overlay--visible-white {
+  display: block;
+  background-color: #ffffff;
+  opacity: 1;
+}

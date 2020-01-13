@@ -48,7 +48,7 @@
   }
 
   .promo__text {
-    @include fontMuseolight20;
+    @include fontMuseoRegular19;
     color: #ffffff;
     margin-top: 20px;
     margin-left: 48px;
@@ -166,3 +166,58 @@
 }
 
 /*Главное меню в Хедере - моибильная вреися: END*/
+/*Главное меню в Хедере Планшетная версия: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header-top__wrapper {
+    box-sizing: border-box;
+    padding-top: 2.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .header-top {
+    padding-bottom: 2.1vw;
+  }
+
+  .header-top__logo {
+    width: 30vw;
+    margin-left: 0;
+  }
+
+  .header__promo .promo__text {
+    font-size: $t-text-s;
+    letter-spacing: .015vw;
+    margin-top: 0.8vw;
+    margin-bottom: 0.75vw;
+    margin-left: 2.5vw;
+  }
+
+  .header__promo .promo__text::before {
+    height: 2.5vw;
+    width: 2.2vw;
+    background-size: 2.2vw 2.5vw;
+    top: 0;
+    left: -3vw;
+  }
+
+  .main-nav__list {
+    padding-top: 1.3vw;
+    padding-bottom: .5vw;
+    margin-left: -1vw;
+  }
+
+  .main-nav__link {
+    font-size: $t-text-l;
+    letter-spacing: $letter-spacing-0-2;
+  }
+
+  .main-nav__item:not(:first-child) {
+    background-size: 0.5vw;
+    background-position-y: 0.8vw;
+  }
+
+  .main-nav__item {
+    padding: 0 2.2vw;
+    letter-spacing: 0.14vw;
+  }
+}

@@ -26,8 +26,8 @@
 }
 
 .video-js {
-  width: 100%;
-  height: auto;
+  margin: auto;
+  display: block;
   position: relative;
 
   video {
@@ -39,4 +39,13 @@
 
 .vjs-text-track-display {
   display: none;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .mini-slider__wrapper {
+    .slick-dots {
+      bottom: -2.2vw;
+      left: 19.8vw;
+    }
+  }
 }

@@ -93,3 +93,14 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .request-form__input {
+    font-size: $t-text-s;
+    padding: 1vw 0.75vw 0.6vw 0.75vw;
+
+    &::placeholder {
+      font-size: $t-text-s;
+    }
+  }
+}

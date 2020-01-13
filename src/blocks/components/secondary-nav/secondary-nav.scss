@@ -81,9 +81,11 @@
     margin-bottom: 23px;
   }
 
-  .secondary-nav__item:nth-child(1) .secondary-nav__link {
+  .secondary-nav__item:nth-child(1) {
     order: 4;
+  }
 
+  .secondary-nav__item:nth-child(1) .secondary-nav__link {
     &::before {
       background-image: url('../img/svg/phoneW.svg');
       top: -3px;
@@ -91,9 +93,11 @@
     }
   }
 
-  .secondary-nav__item:nth-child(2) .secondary-nav__link {
+  .secondary-nav__item:nth-child(2) {
     order: 2;
+  }
 
+  .secondary-nav__item:nth-child(2) .secondary-nav__link {
     &::before {
       background-image: url('../img/svg/locationW.svg');
       top: 0px;
@@ -101,9 +105,11 @@
     }
   }
 
-  .secondary-nav__item:nth-child(3) .secondary-nav__link {
+  .secondary-nav__item:nth-child(3) {
     order: 3;
+  }
 
+  .secondary-nav__item:nth-child(3) .secondary-nav__link {
     &::before {
       background-image: url('../img/svg/envelopeW.svg');
       top: 2px;
@@ -111,9 +117,11 @@
     }
   }
 
-  .secondary-nav__item:nth-child(4) .secondary-nav__link {
+  .secondary-nav__item:nth-child(4) {
     order: 1;
+  }
 
+  .secondary-nav__item:nth-child(4) .secondary-nav__link {
     &::before {
       background-image: url('../img/svg/priceW.svg');
       top: -1px;
@@ -151,3 +159,67 @@
     margin-left: 10.5vw;
   }
 }
+
+/*Планшетная версия: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .secondary-nav {
+    padding-bottom: 0;
+  }
+
+  .secondary-nav__link {
+    margin-left: 6vw;
+  }
+
+  .secondary-nav__text {
+    font-size: $t-text-s;
+  }
+
+  .secondary-nav__item:nth-child(1) .secondary-nav__link::before {
+    height: 3vw;
+    width: 2.5vw;
+    background-size: 2.5vw 3vw;
+    top: 0;
+    left: -2vw;
+  }
+
+  .secondary-nav__item:nth-child(2) .secondary-nav__link::before,
+  .secondary-nav__item:nth-child(3) .secondary-nav__link::before,
+  .secondary-nav__item:nth-child(4) .secondary-nav__link::before {
+    height: 2.5vw;
+    width: 2.2vw;
+    background-size: 2.2vw 2.5vw;
+    top: 0.3vw;
+    left: -3vw;
+  }
+
+  .secondary-nav--in-footer {
+    padding-left: 1.5vw;
+    padding-top: 1vw;
+
+    .secondary-nav__item {
+      margin-bottom: 0.2vw;
+    }
+  }
+
+  .secondary-nav--in-footer .secondary-nav__item:nth-child(4) .secondary-nav__link::before {
+    height: 2.5vw;
+    width: 2.2vw;
+    @include tabletfooterNavIcon;
+  }
+
+  .secondary-nav--in-footer .secondary-nav__item:nth-child(2) .secondary-nav__link::before {
+    @include tabletfooterNavIcon;
+  }
+
+  .secondary-nav--in-footer .secondary-nav__item:nth-child(3) .secondary-nav__link::before {
+    @include tabletfooterNavIcon;
+  }
+
+  .secondary-nav--in-footer .secondary-nav__item:nth-child(1) .secondary-nav__link::before {
+    @include tabletfooterNavIcon;
+  }
+}
+
+
+
+/*Планшетная версия: END*/

@@ -2,10 +2,11 @@
   @include centered;
   flex-direction: column;
   position: relative;
+  padding-top: 50px;
 }
 
 .photos__item {
-  padding-bottom: 70px;
+  padding-bottom: 20px;
 }
 
 .photos__title {
@@ -32,4 +33,41 @@
 
 .photos__img {
   width: 100%;
+}
+
+/*Планшетная версия: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .photos {
+    padding-top: 1.8vw;
+
+    .tns-controls,
+    .tns-nav,
+    .tns-liveregion {
+      display: none;
+    }
+
+    .tns-outer {
+      width: 92%;
+      transform: translateX(3%);
+    }
+
+    &--last {
+      padding-bottom: 8vw;
+    }
+
+  }
+
+  .photos__item {
+    padding-bottom: 0;
+  }
+
+  .photos__title {
+    font-size: $t-title-s;
+    padding-bottom: 0;
+  }
+
+  .photos__photo {
+    background-color: transparent;
+    padding: 0 0.5vw;
+  }  
 }

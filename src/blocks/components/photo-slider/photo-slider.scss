@@ -2,6 +2,25 @@
   display: flex;
   flex-direction: column;
 
+  .video-button {
+    width: 84px;
+    height: 84px;
+    background-size: 84px 84px;
+  }
+
+  &--popup {
+    z-index: 15000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .vjs-tech {
+    width: 100%;
+    height: 100%;
+  }
+
   .tns-controls button:first-child,
   .tns-controls button:last-child {
     position: absolute;
@@ -27,6 +46,32 @@
 
   .tns-outer {
     position: relative;
+
+    .tns-inner {
+      margin: auto !important;
+    }
+
+    &--popup {
+      width: 38%;
+      max-height: 100vh;
+      height: 100vh;
+      z-index: 15000;
+      margin: 0 auto;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+
+      .tns-controls button:first-child {
+        left: -29vw;
+      }
+
+      .tns-controls button:last-child {
+        right: -29vw;
+      }
+    }
+
+
   }
 
   .tns-liveregion,
@@ -41,7 +86,7 @@
     &::before {
       @include beforeAfter;
       position: absolute;
-      width: 160px;
+      width: 12.5%;
       height: 100%;
       top: 0;
       left: 0;
@@ -53,7 +98,7 @@
     &::after {
       @include beforeAfter;
       position: absolute;
-      width: 160px;
+      width: 12.5%;
       height: 100%;
       top: 0;
       right: 0;
@@ -61,8 +106,17 @@
       z-index: 1000;
       background-color: white;
     }
-  }
 
+    &--popup {
+      display: flex;
+      height: 100vh;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .photo-slider__title {
@@ -70,6 +124,16 @@
   @include fontMuseoLight44;
   text-align: left;
   padding-bottom: 30px;
+}
+
+.photo-slider__item {
+  display: inline-block;
+  position: relative;
+}
+
+.photo-slider__picture {
+  display: flex;
+  justify-content: center;
 }
 
 .photo-slider__image {
@@ -81,6 +145,46 @@
   @include centered;
   @include fontMuseoLight22;
   text-align: center;
+  width: auto;
+  max-width: 100%;
   line-height: 35px;
-  padding: 65px 10% 35px;
+  margin: 20px 20px 0 20px;
+  padding: 50px 10% 55px;
+  background-color: $light-gray;
+  display: block;
 }
+
+.photo-slider__text-line {
+  margin: 0;
+}
+
+/*Планшетная версия: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .photo-slider__title {
+    padding-left: 4vw;
+    padding-bottom: 0vw;
+    font-size: $t-title-s;
+  }
+
+  .photo-slider {
+
+    .tns-outer {
+      width: 118%;
+      transform: translateX(-7%);
+    }
+
+    .tns-controls {
+      display: none;
+    }
+  }
+
+  .photo-slider__text {
+    font-size: $t-text-m1;
+    line-height: 2.5vw;
+    padding-top: 2.5vw;
+    padding-bottom: 3.5vw;
+  }
+
+}
+
+/*Планшетная версия: END*/

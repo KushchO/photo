@@ -1,7 +1,13 @@
 .examples {
   @include centered;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
+}
+
+.examples--popup {
+  z-index: 15000;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .examples__slider {
@@ -18,6 +24,9 @@
     }
   }
 }
+
+
+
 .examples__title {
   @include fontMuseoLight44;
   text-align: center;
@@ -50,8 +59,10 @@
   display: block !important;
   width: 100%;
   position: absolute;
-  bottom: 100px;
+  bottom: 0;
+  height: 1px;
 }
+
 .owl-dots {
   display: none;
 }
@@ -61,29 +72,67 @@
   position: absolute;
   width: 20px;
   height: 44px;
-  background-image: url("../img/svg/arrow-black.svg") !important;
+  background-image: url('../img/svg/arrow-black.svg') !important;
 }
+
 .owl-nav button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 112px;
   height: 112px;
-  background-image: url("../img/button-back.png") !important;
+  background-image: url('../img/button-back.png') !important;
   bottom: 240px;
-  position: relative;
+  position: absolute;
 }
 
 .owl-prev {
   left: -0.5%;
-  top: -19px;
+  top: -350px;
 }
+
 .owl-next {
-  top: -131px;
-  right: -91%;
+  top: -350px;
+  right: -1%;
+
   span {
     transform: rotate(180deg);
     left: 47%;
+  }
+}
+
+.examples__slider--popup {
+  z-index: 15000 !important;
+  position: fixed !important;
+  top: 3.5vw;
+  left: 10%;
+  width: 80% !important;
+  //max-width: 1600px;
+  margin: 0 auto;
+
+  .owl-prev {
+    left: 0.5%;
+    top: -50vh;
+  }
+
+  .owl-next {
+    top: -50vh;
+    right: 2%;
+  }
+
+  close-element {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/svg/close.svg');
+    background-size: 30px 30px;
+    background-color: transparent;
+    border: none;
+    right: 4%;
+    top: 20px;
+    left: unset;
+    z-index: 15001;
   }
 }
 
@@ -108,4 +157,63 @@
 .examples__nav-img {
   width: 100%;
   height: auto;
+}
+
+/*Стили для Паншетов: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .examples {
+    padding-bottom: 40px;
+  }
+
+  .examples__title {
+    font-size: $t-title-m;
+    margin-top: 4.4vw;
+    margin-bottom: 0vw;
+    line-height: 4vw;
+  }
+
+  .examples__buttons {
+    padding-top: 2vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 0.5vw;
+  }
+
+  .examples__button {
+    font-size: $t-text-m;
+    padding: 1.2vw 2.95vw;
+    line-height: 2vw;
+  }
+
+  .examples__slider {
+    .owl-item img {
+      width: 40% !important;
+    }
+
+    .owl-nav {
+      display: none !important;
+    }
+  }
+
+  .examples__nav {
+    overflow: hidden;
+    padding-top: 10px;
+  }
+
+  .examples__nav-link {
+    display: none;
+  }
+
+  .examples__nav-link--tab {
+    display: block;
+    width: 12%;
+  }
+
+  .examples__slide {
+    display: none !important;
+  }
+
+  .examples__slide--tab {
+    display: block !important;
+  }
 }

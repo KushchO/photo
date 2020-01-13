@@ -74,31 +74,66 @@
       >Аксессуары</button>
     </div>
     <div class="examples__slider owl-carousel">
-      <img
-        v-for="image in imageCollections[active].collection"
-        v-bind:key="image.id"
-        v-bind:data-hash="image.id"
-        v-bind:src="image.src"
-        v-bind:alt="image.alt"
-      />
-    </div>
-    <div class="examples__nav">
-      <a
-        v-for="image in imageCollections[active].collection"
-        v-bind:class="{ active: isActive === image.id }"
-        class="examples__nav-link"
-        v-bind:key="image.id"
-        v-bind:id="`nav-link` + image.id"
-        v-bind:href="`#` + image.id"
-        v-on:click="isActive = isActive === image.id ? null : image.id"
-      >
+      <template v-for="image in imageCollections[active].collection">
         <img
-          class="examples__nav-img"
+          v-if="screenWidth < 1080 && image.id < 9"
+          v-bind:class="{ 'examples__slide--tab': image.class }"
+          class="examples__slide"
           v-bind:key="image.id"
+          v-bind:data-hash="image.id"
           v-bind:src="image.src"
           v-bind:alt="image.alt"
         />
-      </a>
+      </template>
+      <template v-for="image in imageCollections[active].collection">
+        <img
+          v-if="screenWidth >= 1080"
+          v-bind:class="{ 'examples__slide--tab': image.class }"
+          class="examples__slide"
+          v-bind:key="image.id"
+          v-bind:data-hash="image.id"
+          v-bind:src="image.src"
+          v-bind:alt="image.alt"
+        />
+      </template>
+    </div>
+    <div class="examples__nav">
+      <template v-for="image in imageCollections[active].collection">
+        <a
+          v-if="screenWidth < 1080 && image.id < 9"
+          v-bind:class="{ active: isActive === image.id, 'examples__nav-link--tab': image.class }"
+          class="examples__nav-link"
+          v-bind:key="image.id"
+          v-bind:id="`nav-link` + image.id"
+          v-bind:href="`#` + image.id"
+          v-on:click="isActive = isActive === image.id ? null : image.id"
+        >
+          <img
+            class="examples__nav-img"
+            v-bind:key="image.id"
+            v-bind:src="image.src"
+            v-bind:alt="image.alt"
+          />
+        </a>
+      </template>
+      <template v-for="image in imageCollections[active].collection">
+        <a
+          v-if="screenWidth >= 1080"
+          v-bind:class="{ active: isActive === image.id, 'examples__nav-link--tab': image.class }"
+          class="examples__nav-link"
+          v-bind:key="image.id"
+          v-bind:id="`nav-link` + image.id"
+          v-bind:href="`#` + image.id"
+          v-on:click="isActive = isActive === image.id ? null : image.id"
+        >
+          <img
+            class="examples__nav-img"
+            v-bind:key="image.id"
+            v-bind:src="image.src"
+            v-bind:alt="image.alt"
+          />
+        </a>
+      </template>
     </div>
   </div>
 </template>
@@ -110,6 +145,9 @@ import "owl.carousel";
 export default {
   name: "app",
   methods: {
+    getScreenWidth: function() {
+      this.screenWidth = window.innerWidth;
+    },
     changeCategory: function(num) {
       this.active = num;
     },
@@ -122,10 +160,12 @@ export default {
     },
     watchForActiveClass: function() {}
   },
-  beforUpdate: function() {
-    console.log("Обновлен");
+  created: function() {
+    this.getScreenWidth();
+    window.addEventListener("resize", this.getScreenWidth);
   },
   beforeMount: function() {
+    let expanded = this.expanded;
     $(document).ready(function() {
       this.watchForActiveClass = function() {
         let sliderImages = $(".owl-item");
@@ -140,13 +180,35 @@ export default {
         }
         navigationImages[this.sliderImagesIndex].classList.add("active");
       };
+      this.toggleSliderPopup = function(owl) {
+        $(".examples__slider").on("click", function(e) {
+          if (e.target.tagName === "IMG" && !expanded) {
+            expanded = true;
+            $(".popup_overlay").addClass("popup_overlay--visible-white");
+            $(".examples").addClass("examples--popup");
+            $(".examples__slider").addClass("examples__slider--popup");
+            $(".examples__slider").append(
+              "<button class='close-element'></button>"
+            );
+            owl.trigger("refresh.owl.carousel");
+            $(".close-element, .popup_overlay").on("click", function(e) {
+              $(".examples__slider .close-element").remove();
+              $(".popup_overlay").removeClass("popup_overlay--visible-white");
+              $(".examples").removeClass("examples--popup");
+              $(".examples__slider").removeClass("examples__slider--popup");
+              owl.trigger("refresh.owl.carousel");
+              expanded = false;
+            });
+          }
+        });
+      };
     });
   },
   mounted: function() {
-    console.log("Обновлен");
+    let expanded = this.expanded;
     $(document).ready(function() {
-      this.owl = $(".examples__slider");
-      this.owl.owlCarousel({
+      let owl = $(".examples__slider");
+      owl.owlCarousel({
         items: 1,
         loop: false,
         margin: 10,
@@ -161,19 +223,18 @@ export default {
       });
 
       this.watchForActiveClass();
-      this.owl.on("translated.owl.carousel", this.watchForActiveClass);
+      owl.on("translated.owl.carousel", this.watchForActiveClass);
+      this.toggleSliderPopup(owl);
     });
   },
   updated: function() {
     $(document).ready(function() {
-      this.owl = $(".examples__slider");
-      console.log(this.owl);
-      this.owl.trigger("destroy.owl.carousel");
-      this.owl.find(".owl-item").remove();
-      console.log(this.owl);
+      let owl = $(".examples__slider");
+      owl.trigger("destroy.owl.carousel");
+      owl.find(".owl-item").remove();
 
-      this.owl = $(".examples__slider");
-      this.owl.owlCarousel({
+      owl = $(".examples__slider");
+      owl.owlCarousel({
         items: 1,
         loop: false,
         margin: 10,
@@ -184,7 +245,8 @@ export default {
         animateOut: "fadeOut",
         nav: true
       });
-      this.owl.on("translated.owl.carousel", this.watchForActiveClass);
+      owl.on("translated.owl.carousel", this.watchForActiveClass);
+      this.toggleSliderPopup(owl);
     });
   },
   data() {
@@ -192,6 +254,8 @@ export default {
       owl: "",
       active: 0,
       isActive: null,
+      expanded: false,
+      screenWidth: 0,
       sliderImagesIndex: "",
       watchActiveClass: null,
       imageCollections: [
@@ -204,52 +268,60 @@ export default {
               alt: "cloth1",
               id: 1,
               src: "./img/clothes1.jpg",
-              src2x: "./img/clothes1@2x.jpg"
+              src2x: "./img/clothes1@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
               alt: "cloth2",
               id: 2,
               src: "./img/clothes2.jpg",
-              src2x: "./img/clothes2@2x.jpg"
+              src2x: "./img/clothes2@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
               alt: "cloth3",
               id: 3,
               src: "./img/clothes3.jpg",
-              src2x: "./img/clothes3@2x.jpg"
+              src2x: "./img/clothes3@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
               alt: "cloth4",
               id: 4,
               src: "./img/clothes4.jpg",
-              src2x: "./img/clothes4@2x.jpg"
+              src2x: "./img/clothes4@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
               alt: "cloth5",
               id: 5,
               src: "./img/clothes5.jpg",
-              src2x: "./img/clothes5@2x.jpg"
+              src2x: "./img/clothes5@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
               alt: "cloth6",
               id: 6,
               src: "./img/clothes6.jpg",
-              src2x: "./img/clothes6@2x.jpg"
+              src2x: "./img/clothes6@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
-              alt: "cloth6",
+              alt: "cloth7",
               id: 7,
               src: "./img/clothes7.jpg",
-              src2x: "./img/clothes7@2x.jpg"
+              src2x: "./img/clothes7@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
-              alt: "cloth6",
+              alt: "cloth8",
               id: 8,
               src: "./img/clothes8.jpg",
-              src2x: "./img/clothes8@2x.jpg"
+              src2x: "./img/clothes8@2x.jpg",
+              class: "examples__nav-img--tab"
             },
             {
-              alt: "cloth6",
+              alt: "cloth9",
               id: 9,
               src: "./img/clothes9.jpg",
               src2x: "./img/clothes9@2x.jpg"

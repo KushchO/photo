@@ -1,5 +1,5 @@
 .about {
-  padding-top: 10px;
+  padding-top: 35px;
   padding-bottom: 100px;
   z-index: 5;
 }
@@ -13,11 +13,26 @@
   width: 32.9%;
   display: flex;
   flex-direction: column;
+
+  video {
+    outline: none;
+  }
+
+  .about__text {
+    @include fontMuseoLight15;
+    line-height: 25px;
+  }
 }
 
 .about__image {
   width: 100%;
   position: relative;
+
+  .video-button {
+    width: 84px;
+    height: 84px;
+    background-size: 84px 84px;
+  }
 }
 
 .about__title {
@@ -30,6 +45,7 @@
   @include light17;
   text-align: center;
   line-height: 28px;
+  padding: 0 5%;
 }
 
 .about__item--4 {
@@ -48,43 +64,32 @@
     @include fontMuseoLight15;
     line-height: 25px;
   }
-
-  .video-js .vjs-tech {
-    height: 312px;
-  }
-
-  .about__image {
-    height: 312px;
-  }
 }
 
-.about__link {
+.about__item .about__link {
   min-width: 71%;
+  margin-top: auto;
 }
 
 .about__poster {
-  position: absolute;
   display: flex;
   width: 100%;
-  height: 100%;
   z-index: 100;
-  display: flex;
   justify-content: center;
   align-content: center;
   transition: all 0.3s ease;
 
-  &::before {
-    @include beforeAfter;
-    top: 38%;
-    width: 67px;
-    height: 67px;
-    background-image: url(../img/svg/play.svg);
-  }
-
   &--hidden {
-    z-index: -1;
-    opacity: 0;
+    display: none;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.video-js--hidden {
+  display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -159,5 +164,81 @@
   .about__link {
     margin-top: 6vw;
     padding: 3vw 5vw;
+  }
+}
+
+/*Стили для Паншетов: BEGIN*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .about {
+    padding-top: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+  }
+
+  .about-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .mini-slider__wrapper .slick-dots {
+    bottom: -2.2vw;
+    left: 8.8vw;
+  }
+
+  .mini-slider__wrapper .slick-dots li {
+    width: 6px;
+    height: 6px;
+    margin-right: 0vw;
+  }
+
+  .about__item--4 {
+    width: 48.5%;
+    margin-bottom: 5vw;
+  }
+
+  .about__title {
+    padding-top: 3vw;
+    font-size: $t-title-m;
+  }
+
+  .about__item--4 .about__text {
+    margin-top: 1vw;
+    line-height: 2.8vw;
+    font-size: $t-text-m1;
+    margin-bottom: 2.2vw;
+  }
+
+  .about--bottom {
+    padding-top: 3vw;
+    padding-bottom: 3.5vw;
+
+    .about__image .video-button {
+      width: 5.5vw;
+      height: 5.5vw;
+      background-size: 5.5vw;
+      top: 40%;
+    }
+
+    .mini-slider__wrapper .slick-dots {
+      left: 12.8vw;
+    }
+
+    .about__title {
+      padding-top: 2.2vw;
+      font-size: $t-text-l;
+    }
+
+    .about__text {
+      font-size: $t-text-xs;
+      line-height: 1.75vw;
+      margin-top: 0vw;
+    }
+
+    .about__item .about__link {
+      font-size: $t-text-s;
+      min-width: 66%;
+      padding: 0.6vw 2vw;
+      margin-top: 1vw;
+    }
   }
 }
