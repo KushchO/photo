@@ -191,6 +191,12 @@
   .footer-logo__logo {
     width: 100%;
   }
+
+  ul.footer_list,
+  .secondary-nav--in-footer {
+    border-bottom: 1px solid $button-map-grey;
+    margin-bottom: 6.5vw;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

@@ -18,14 +18,19 @@ $text-area_placeholder: #c1c1c1;
 
 /*Mobile font-sizes*/
 $m-title-xs: 4.8vw;
-$m-title-s: 5.867vw;
+$m-title-s: 5.867vw; //22px - 375
+$m-title-m: 6.4vw; //24px - 375
 $m-title-L: 6.9334vw;
-$m-title-xl: 9.0667vw;
+$m-title-xl: 9.0667vw; //34 - 375
+$m-title-xxl: 9.4vw; //36 - 375
 
+$m-text-xxxxs: 3vw; //11px - 375
+$m-text-xxxs: 3.2vw; //12px - 375
 $m-text-xxs: 3.467vw;
 $m-text-xs: 3.735vw;
 $m-text-s: 4vw;
-$m-text-m: 4.267vw;
+$m-text-m: 4.267vw; //16px - 375
+$m-text-l: 4.8vw; //18px - 375
 
 /*Tablet fonts*/
 $t-text-xxs: 1vw; //10px - 800

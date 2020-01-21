@@ -3,10 +3,14 @@ import { tns } from 'tiny-slider/src/tiny-slider';
 import { initVideoSlides, fitVideoToImage } from '../../../js/utility/utitlity';
 let expanded = false;
 const sliderContainer = document.querySelector('.photo-slider__slider');
-
+let windowWidth = window.innerWidth;
+let slidesNumber = 4;
+if (windowWidth < 769) {
+  slidesNumber = 1;
+}
 if (sliderContainer) {
   let slider = tns({
-    items: 4,
+    items: slidesNumber,
     center: true,
     container: '.photo-slider__slider',
     swipeAngle: false,
@@ -19,11 +23,10 @@ if (sliderContainer) {
   const container = document.querySelectorAll('.video');
 
   const videoContainer = document.querySelectorAll('.video-slider');
-  fitVideoToImage(videoContainer);
+  //fitVideoToImage(videoContainer);
   initVideoSlides(videoContainer, container, slider);
   console.log(videoContainer);
   if (videoContainer.length === 0) {
-    console.log('!');
     $('.photo-slider').on('click', function(e) {
       if (e.target.classList.contains('photo-slider__image') && !expanded) {
         slider.destroy();

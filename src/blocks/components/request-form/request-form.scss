@@ -105,11 +105,12 @@
 
   .request-form__title {
     @include mobile-middle-title;
-    margin-bottom: 0;
+    margin-bottom: 1vw;
   }
 
   .request-form__info {
-    display: none;
+    font-size: $m-text-m;
+    padding: 0 6.8vw;
   }
 
   .request-form__submit {

@@ -188,3 +188,61 @@
 }
 
 /*Планшетная версия: END*/
+
+/*Мобильная версия: BEGIN*/
+@media (max-width: 768px) {
+  .photo-slider {
+    .tns-controls {
+      display: none;
+    }
+
+    .tns-ovh {
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .tns-inner {
+      width: 87%;
+    }
+
+    .tns-nav {
+      display: flex;
+      position: absolute;
+      bottom: -3vw;
+      left: 0;
+      width: 100%;
+      justify-content: center;
+
+      button {
+        @include sliderButton;
+      }
+
+      .tns-nav-active {
+        opacity: 1;
+      }
+    }
+
+    .photo-slider__text {
+      font-size: $m-text-s;
+      padding: 9vw 2vw;
+      line-height: 6.5vw;
+      padding-bottom: 5vw;
+    }
+  }
+
+  .photo-slider__title {
+    font-size: $m-title-m;
+    line-height: 9.5vw;
+    padding: 6vw 6.5vw 5vw;
+  }
+
+  .photo-slider__image {
+    padding: 0 1vw;
+  }
+
+}
+
+/*Мобильная версия: END*/

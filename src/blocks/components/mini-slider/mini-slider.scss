@@ -41,6 +41,20 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+  .mini-slider__slide-wrapper:not(:first-child) {
+    display: none !important;
+  }
+
+  .mini-slider__slide-wrapper {
+    padding: 0 2.5vw;
+  }
+
+  .mini-slider__picture {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) and (min-width: 768px) {
   .mini-slider__wrapper {
     .slick-dots {

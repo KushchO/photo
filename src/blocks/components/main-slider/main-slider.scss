@@ -167,17 +167,19 @@
   .slider__title {
     font-size: 7vw;
     line-height: 9.5vw;
+    padding-right: 5vw;
   }
 
   .slider__link {
+    width: unset;
     margin-top: unset;
     font-size: 4.26vw;
-    line-height: 12.5vw;
+    line-height: 5.5vw;
     text-decoration: none;
     text-align: center;
     border: 1px solid white;
     border-radius: 2px;
-    margin-top: 9vw;
+    margin-top: 19vw;
   }
 }
 
@@ -233,9 +235,6 @@
     width: 21vw;
     text-align: center;
   }
-
-
-
 }
 
 /*Стили для Паншетов: END*/

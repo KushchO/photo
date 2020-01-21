@@ -1,23 +1,14 @@
-import videojs from 'video.js';
-function fitVideoToImage(container, slider) {
-  if (container.length > 0) {
-    container.forEach(item => {
-      //debugger;
-      const videoSlide = item.querySelectorAll('.video');
-      videoSlide.forEach(item => {
-        const videoBlock = item.querySelector('.video-js');
-        const img = item.querySelector('img');
-        let width = img.offsetWidth;
-        let height = img.offsetHeight;
-        videoBlock.style.width = width + 'px';
-        videoBlock.style.height = height + 'px';
-        window.addEventListener('resize', () => {
-          height = img.offsetHeight;
-          width = img.offsetWidth;
-          videoBlock.style.width = width + 'px';
-          videoBlock.style.height = height + 'px';
-        });
-      });
+function fitVideoToImage(container) {
+  if (container) {
+    console.log(container);
+    const videoBlock = container.querySelector('.video-js');
+    let width = container.offsetWidth;
+    videoBlock.style.width = width + 'px';
+    videoBlock.style.height = width + 'px';
+    window.addEventListener('resize', () => {
+      width = container.offsetWidth;
+      videoBlock.style.width = width + 'px';
+      videoBlock.style.height = width + 'px';
     });
   }
 }
@@ -38,7 +29,7 @@ function posterAndVideoClickHandlers(wrapper) {
   let play = true;
   poster.classList.add('hidden');
   video.classList.remove('video-js--hidden');
-  video.addEventListener('click', () => {
+  video.addEventListener('mouseenter', () => {
     if (!play) {
       video.play();
       play = true;
@@ -49,10 +40,18 @@ function posterAndVideoClickHandlers(wrapper) {
   });
 }
 
+function posterMouseOverHandler(wrapper) {
+  const poster = wrapper.querySelector('.video-poster');
+  const video = wrapper.querySelector('.video-js');
+  poster.classList.add('hidden');
+  video.classList.remove('video-js--hidden');
+  video.play();
+}
+
 function initVideoSlides(slidesContainer, videoContainers, slider) {
   if (slidesContainer.length > 0 && videoContainers.length > 0) {
-    slidesContainer.forEach(item => {
-      item.addEventListener('click', e => {
+    slidesContainer.forEach(container => {
+      container.addEventListener('mouseenter', e => {
         if (
           !e.target.classList.contains('video-js') &&
           e.target.classList.contains('video-button')
@@ -76,5 +75,6 @@ export {
   initVideoSlides,
   posterAndVideoClickHandlers,
   initMiniSlider,
-  fitVideoToImage
+  fitVideoToImage,
+  posterMouseOverHandler
 };

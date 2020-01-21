@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="examples">
     <h1 class="examples__title">Наши работы</h1>
-    <div class="examples__buttons">
+    <div v-bind:class="{'owl-carousel': screenWidth <769}" class="examples__buttons">
       <button
         class="examples__button"
         ref="button1"
@@ -76,8 +76,7 @@
     <div class="examples__slider owl-carousel">
       <template v-for="image in imageCollections[active].collection">
         <img
-          v-if="screenWidth < 1080 && image.id < 9"
-          v-bind:class="{ 'examples__slide--tab': image.class }"
+          v-if="screenWidth < 1200 && screenWidth > 768 &&  image.id < 9"
           class="examples__slide"
           v-bind:key="image.id"
           v-bind:data-hash="image.id"
@@ -87,8 +86,17 @@
       </template>
       <template v-for="image in imageCollections[active].collection">
         <img
-          v-if="screenWidth >= 1080"
-          v-bind:class="{ 'examples__slide--tab': image.class }"
+          v-if="screenWidth <= 768 &&  image.id < 6"
+          class="examples__slide"
+          v-bind:key="image.id"
+          v-bind:data-hash="image.id"
+          v-bind:src="image.src"
+          v-bind:alt="image.alt"
+        />
+      </template>
+      <template v-for="image in imageCollections[active].collection">
+        <img
+          v-if="screenWidth >= 1200"
           class="examples__slide"
           v-bind:key="image.id"
           v-bind:data-hash="image.id"
@@ -100,8 +108,7 @@
     <div class="examples__nav">
       <template v-for="image in imageCollections[active].collection">
         <a
-          v-if="screenWidth < 1080 && image.id < 9"
-          v-bind:class="{ active: isActive === image.id, 'examples__nav-link--tab': image.class }"
+          v-if="screenWidth < 1200 && screenWidth > 768 && image.id < 9"
           class="examples__nav-link"
           v-bind:key="image.id"
           v-bind:id="`nav-link` + image.id"
@@ -118,8 +125,24 @@
       </template>
       <template v-for="image in imageCollections[active].collection">
         <a
-          v-if="screenWidth >= 1080"
-          v-bind:class="{ active: isActive === image.id, 'examples__nav-link--tab': image.class }"
+          v-if="screenWidth <= 768 && image.id < 6"
+          class="examples__nav-link"
+          v-bind:key="image.id"
+          v-bind:id="`nav-link` + image.id"
+          v-bind:href="`#` + image.id"
+          v-on:click="isActive = isActive === image.id ? null : image.id"
+        >
+          <img
+            class="examples__nav-img"
+            v-bind:key="image.id"
+            v-bind:src="image.src"
+            v-bind:alt="image.alt"
+          />
+        </a>
+      </template>
+      <template v-for="image in imageCollections[active].collection">
+        <a
+          v-if="screenWidth >= 1200"
           class="examples__nav-link"
           v-bind:key="image.id"
           v-bind:id="`nav-link` + image.id"
@@ -182,7 +205,11 @@ export default {
       };
       this.toggleSliderPopup = function(owl) {
         $(".examples__slider").on("click", function(e) {
-          if (e.target.tagName === "IMG" && !expanded) {
+          if (
+            e.target.tagName === "IMG" &&
+            !e.target.classList.contains("examples__nav-img") &&
+            !expanded
+          ) {
             expanded = true;
             $(".popup_overlay").addClass("popup_overlay--visible-white");
             $(".examples").addClass("examples--popup");
@@ -208,22 +235,33 @@ export default {
     let expanded = this.expanded;
     $(document).ready(function() {
       let owl = $(".examples__slider");
+      let owl1 = $(".examples__buttons");
+      if (window.innerWidth < 769) {
+        owl1.owlCarousel({
+          items: 1,
+          centered: true,
+          loop: false,
+          margin: 10,
+          nav: false,
+          dots: false,
+          autoWidth: true
+        });
+      }
       owl.owlCarousel({
         items: 1,
         loop: false,
         margin: 10,
-        URLhashListener: true,
         autoplayHoverPause: true,
         animateOut: "fadeOut",
         animateIn: "fadeIn",
-        startPosition: "URLHash",
-        animateIn: "fadeIn",
-        animateOut: "fadeOut",
         nav: true
       });
-
-      this.watchForActiveClass();
-      owl.on("translated.owl.carousel", this.watchForActiveClass);
+      const imgList = document.querySelectorAll(".examples__nav-img");
+      console.log(imgList);
+      const sliderNavButtons = document.querySelectorAll(".owl-dot");
+      for (let i = 0; i < imgList.length; i++) {
+        sliderNavButtons[i].appendChild(imgList[i].cloneNode());
+      }
       this.toggleSliderPopup(owl);
     });
   },
@@ -238,20 +276,24 @@ export default {
         items: 1,
         loop: false,
         margin: 10,
-        URLhashListener: true,
         autoplayHoverPause: true,
-        startPosition: "URLHash",
         animateIn: "fadeIn",
         animateOut: "fadeOut",
         nav: true
       });
-      owl.on("translated.owl.carousel", this.watchForActiveClass);
+      const imgList = document.querySelectorAll(".examples__nav-img");
+      const sliderNavButtons = document.querySelectorAll(".owl-dot");
+      for (let i = 0; i < imgList.length; i++) {
+        sliderNavButtons[i].appendChild(imgList[i].cloneNode());
+      }
+
       this.toggleSliderPopup(owl);
     });
   },
   data() {
     return {
-      owl: "",
+      owl: null,
+      owl1: null,
       active: 0,
       isActive: null,
       expanded: false,
@@ -269,56 +311,56 @@ export default {
               id: 1,
               src: "./img/clothes1.jpg",
               src2x: "./img/clothes1@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth2",
               id: 2,
               src: "./img/clothes2.jpg",
               src2x: "./img/clothes2@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth3",
               id: 3,
               src: "./img/clothes3.jpg",
               src2x: "./img/clothes3@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth4",
               id: 4,
               src: "./img/clothes4.jpg",
               src2x: "./img/clothes4@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth5",
               id: 5,
               src: "./img/clothes5.jpg",
               src2x: "./img/clothes5@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth6",
               id: 6,
               src: "./img/clothes6.jpg",
               src2x: "./img/clothes6@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth7",
               id: 7,
               src: "./img/clothes7.jpg",
               src2x: "./img/clothes7@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth8",
               id: 8,
               src: "./img/clothes8.jpg",
               src2x: "./img/clothes8@2x.jpg",
-              class: "examples__nav-img--tab"
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "cloth9",
@@ -348,31 +390,57 @@ export default {
               alt: "	bags1",
               id: 1,
               src: "./img/bag1.jpg",
-              src2x: "./img/bag1@2x.jpg"
+              src2x: "./img/bag1@2x.jpg",
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "bags2",
               id: 2,
               src: "./img/bag2.jpg",
-              src2x: "./img/bag2@2x.jpg"
+              src2x: "./img/bag2@2x.jpg",
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "bags3",
               id: 3,
               src: "./img/bag3.jpg",
-              src2x: "./img/bag3@2x.jpg"
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "bags3",
               id: 4,
               src: "./img/bag3.jpg",
-              src2x: "./img/bag3@2x.jpg"
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
             },
             {
               alt: "bags3",
               id: 5,
               src: "./img/bag3.jpg",
-              src2x: "./img/bag3@2x.jpg"
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
+            },
+            {
+              alt: "bags3",
+              id: 6,
+              src: "./img/bag3.jpg",
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
+            },
+            {
+              alt: "bags3",
+              id: 7,
+              src: "./img/bag3.jpg",
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
+            },
+            {
+              alt: "bags3",
+              id: 8,
+              src: "./img/bag3.jpg",
+              src2x: "./img/bag3@2x.jpg",
+              classTab: "examples__nav-img--tab"
             }
           ]
         }

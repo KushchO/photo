@@ -1,7 +1,10 @@
 import $ from 'jquery';
 import { tns } from 'tiny-slider/src/tiny-slider';
 const windowWidth = window.innerWidth;
-
+let slidesNumber = 4;
+if (windowWidth < 769) {
+  slidesNumber = 1;
+}
 if (windowWidth < 1080) {
   const photosList = document.querySelectorAll('.photos');
 
@@ -10,7 +13,7 @@ if (windowWidth < 1080) {
     const container = photosList[i].querySelector('.photos__list');
     container.classList.add('photos__list--' + (i + 1));
     let slider1 = tns({
-      items: 4,
+      items: slidesNumber,
       container: '.' + container.classList[1],
       swipeAngle: false,
       speed: 400,

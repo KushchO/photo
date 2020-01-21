@@ -64,7 +64,18 @@
 }
 
 .owl-dots {
-  display: none;
+  display: flex;
+  padding: 0 4.1%;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
+.owl-dot {
+  width: 7%;
+}
+
+.owl-dot.active {
+  border: 1px solid #000000 !important;
 }
 
 .owl-nav span {
@@ -120,7 +131,7 @@
     right: 2%;
   }
 
-  close-element {
+  .close-element {
     position: absolute;
     display: block;
     width: 30px;
@@ -137,7 +148,7 @@
 }
 
 .examples__nav {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: relative;
   padding: 0 4.1%;
@@ -157,6 +168,20 @@
 .examples__nav-img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .examples__title {
+    font-size: $m-title-L;
+    margin-top: 1.2vw;
+  }
+
+  .examples .owl-prev,
+  .examples .owl-next {
+    display: none;
+  }
+
+
 }
 
 /*Стили для Паншетов: BEGIN*/
@@ -193,27 +218,55 @@
     .owl-nav {
       display: none !important;
     }
+
+    .owl-dot {
+      width: 12%;
+      padding-top: 10px;
+    }
   }
 
   .examples__nav {
     overflow: hidden;
     padding-top: 10px;
   }
+}
 
-  .examples__nav-link {
-    display: none;
+@media (max-width: 768px) {
+
+  .examples {
+    width: 100%;
+    padding-bottom: 20vw;
   }
 
-  .examples__nav-link--tab {
-    display: block;
-    width: 12%;
+  .examples__title {
+    margin-bottom: 3vw;
   }
 
-  .examples__slide {
-    display: none !important;
+  .examples__buttons {
+    padding-top: 0;
+    padding-left: 2vw;
+    padding-bottom: 11vw;
   }
 
-  .examples__slide--tab {
-    display: block !important;
+  .examples__button {
+    padding: 2.5vw 7.8vw;
+  }
+
+  .examples__buttons .owl-stage {
+    display: flex;
+  }
+
+  .examples__slider .owl-item img {
+    width: 75vw !important;
+  }
+
+  .examples__slider {
+    .owl-dots {
+      padding-top: 2vw;
+    }
+
+    .owl-dot {
+      width: 22%;
+    }
   }
 }
