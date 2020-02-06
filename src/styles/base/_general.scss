@@ -49,6 +49,42 @@ picture img {
   width: 100%;
 }
 
+/*Video: BEGIN*/
+
+.video--popup {
+  display: flex !important;
+  align-items: center;
+  height: 100vh;
+
+  .video-js {
+    width: 22vw !important;
+    height: auto !important;
+  }
+
+  .about__poster {
+    width: unset;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .video--popup {
+    .video-js {
+      width: 60vw !important;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .video--popup {
+    .video-js {
+      width: 80vw !important;
+    }
+  }
+}
+
+
+/*Video: END*/
+
 @media (max-width: 768px) {
   .mobile-br {
     display: block;
@@ -58,4 +94,18 @@ picture img {
     display: none;
   }
 
+}
+
+/*Всплывающие блоки*/
+
+.fade-block {
+  opacity: 0;
+  position: relative;
+  top: 40px;
+  transition: all 1s ease-in-out;
+
+  &--visible {
+    opacity: 1;
+    top: 0;
+  }
 }

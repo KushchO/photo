@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="examples">
+  <section id="app" class="examples fade-block">
     <h1 class="examples__title">Наши работы</h1>
     <div v-bind:class="{'owl-carousel': screenWidth <769}" class="examples__buttons">
       <button
@@ -158,7 +158,7 @@
         </a>
       </template>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

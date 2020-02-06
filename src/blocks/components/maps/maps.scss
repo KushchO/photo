@@ -51,7 +51,7 @@
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
 }
 
-.ymaps-2-1-74-map {
+.ymaps-2-1-75-map {
   width: 100% !important;
   height: 100% !important;
 }
@@ -68,7 +68,7 @@
   z-index: 10001;
   padding: 4%;
 
-  .ymaps-2-1-74-map {
+  .ymaps-2-1-75-map {
     height: 100% !important;
   }
 }
@@ -98,6 +98,8 @@
     padding: 0;
     padding-top: 17vw;
     padding-bottom: 9vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;

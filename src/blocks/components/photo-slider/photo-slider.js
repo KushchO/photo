@@ -25,47 +25,62 @@ if (sliderContainer) {
   const videoContainer = document.querySelectorAll('.video-slider');
   //fitVideoToImage(videoContainer);
   initVideoSlides(videoContainer, container, slider);
-  console.log(videoContainer);
   if (videoContainer.length === 0) {
     $('.photo-slider').on('click', function(e) {
       if (e.target.classList.contains('photo-slider__image') && !expanded) {
-        slider.destroy();
-        slider = tns({
-          items: 1,
-          center: true,
-          container: '.photo-slider__slider',
-          swipeAngle: false,
-          speed: 400,
-          controls: true,
-          mouseDrag: true
-        });
-        expanded = true;
-        $('.popup_overlay').addClass('popup_overlay--visible-white');
-        $('.tns-outer').addClass('tns-outer--popup');
-        $('.tns-ovh').addClass('tns-ovh--popup');
-        $('.photo-slider').addClass('photo-slider--popup');
-        $('.popup_overlay').append(
-          "<button class='close-element close-element--popup'></button>"
-        );
-        $('.close-element, .popup_overlay').on('click', function(e) {
-          slider.destroy();
-          slider = tns({
-            items: 4,
-            center: true,
-            container: '.photo-slider__slider',
-            swipeAngle: false,
-            speed: 400,
-            controls: true,
-            mouseDrag: true
-          });
-          $('.popup_overlay .close-element').remove();
-          $('.popup_overlay').removeClass('popup_overlay--visible-white');
-          $('.tns-outer').removeClass('photo-slider--popup');
-          $('.photo-slider').removeClass('examples__slider--popup');
-          $('.tns-ovh').removeClass('tns-ovh--popup');
-          expanded = false;
-        });
+        openSliderPopup();
       }
     });
+    $('.close-element--popup, .popup_overlay').on('click', function(e) {
+      closeSliderPopup();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.keyCode === 27) {
+        closeSliderPopup();
+      }
+    });
+    const openSliderPopup = () => {
+      slider.destroy();
+      slider = tns({
+        items: 1,
+        center: true,
+        container: '.photo-slider__slider',
+        swipeAngle: false,
+        speed: 400,
+        controls: true,
+        mouseDrag: true
+      });
+      expanded = true;
+      $('.popup_overlay').addClass('popup_overlay--visible-white');
+      $('.tns-outer').addClass('tns-outer--popup');
+      $('.tns-ovh').addClass('tns-ovh--popup');
+      $('.photo-slider').addClass('photo-slider--popup');
+      $('.popup_overlay').append(
+        "<button class='close-element close-element--popup'></button>"
+      );
+    };
+
+    const closeSliderPopup = () => {
+      slider.destroy();
+      slider = tns({
+        items: slidesNumber,
+        center: true,
+        container: '.photo-slider__slider',
+        swipeAngle: false,
+        speed: 400,
+        controls: true,
+        mouseDrag: true
+      });
+      $('.popup_overlay .close-element').remove();
+      $('.popup_overlay').removeClass('popup_overlay--visible-white');
+      $('.photo-slider').removeClass('photo-slider--popup');
+      $('.photo-slider').removeClass('examples__slider--popup');
+      $('.tns-ovh').removeClass('tns-ovh--popup');
+      expanded = false;
+    };
   }
 }
+
+/*Инициализация видео: BEGIN*/
+
+/*Инициализация видео: END*/

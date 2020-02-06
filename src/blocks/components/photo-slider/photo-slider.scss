@@ -1,6 +1,7 @@
 .photo-slider {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .video-button {
     width: 84px;
@@ -9,7 +10,13 @@
   }
 
   &--popup {
-    z-index: 15000;
+    z-index: 1705;
+
+    .photo-slider__text,
+    .photo-slider__title,
+    .close-element {
+      display: none;
+    }
   }
 
   .hidden {
@@ -53,14 +60,13 @@
 
     &--popup {
       width: 38%;
-      max-height: 100vh;
-      height: 100vh;
       z-index: 15000;
       margin: 0 auto;
       position: fixed;
       top: 0;
       left: 50%;
-      transform: translate(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
 
       .tns-controls button:first-child {
         left: -29vw;
@@ -109,7 +115,7 @@
 
     &--popup {
       display: flex;
-      height: 100vh;
+      //height: 100vh;
 
       &::after,
       &::before {
@@ -171,6 +177,10 @@
     .tns-outer {
       width: 118%;
       transform: translateX(-7%);
+
+      &--popup {
+        width: 60%;
+      }
     }
 
     .tns-controls {
@@ -200,6 +210,20 @@
 
       &::before,
       &::after {
+        display: none;
+      }
+    }
+
+    .tns-outer {
+      &--popup {
+        width: 90%;
+
+        .tns-inner {
+          width: 100%;
+        }
+      }
+
+      .tns-nav {
         display: none;
       }
     }

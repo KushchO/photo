@@ -16,7 +16,7 @@
     background-image: url('../img/svg/close-popup.svg');
     width: 94px;
     height: 94px;
-    background-size: 94px 94px;
+    background-size: 94px;
     right: 3vw;
     top: 3vw;
   }
@@ -29,4 +29,14 @@
 
 .close-element--visible {
   display: block;
+}
+
+@media(max-width: 768px) {
+  .close-element {
+    &--popup {
+      width: 12vw;
+      height: 12vw;
+      background-size: 12vw;
+    }
+  }
 }

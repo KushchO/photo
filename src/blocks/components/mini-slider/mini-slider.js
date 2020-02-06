@@ -4,7 +4,7 @@ import 'slick-carousel';
 import {
   initMiniSlider,
   fitVideoToImage,
-  posterMouseOverHandler
+  posterClickHandler
 } from '../../../js/utility/utitlity';
 
 $(document).ready(function() {
@@ -21,10 +21,9 @@ $(document).ready(function() {
 
   const posterWrappers = document.querySelectorAll('.video');
   posterWrappers.forEach(item => {
-    console.log(item);
     fitVideoToImage(item);
-    item.addEventListener('mouseover', () => {
-      posterMouseOverHandler(item);
+    item.addEventListener('click', () => {
+      posterClickHandler(item);
     });
   });
 });

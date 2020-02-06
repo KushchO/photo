@@ -16,7 +16,7 @@
   .mobile-menu__close {
     @include mobile-button;
     background-image: url(../img/svg/burger.svg);
-    left: 5vw;
+    left: 5.5vw;
     top: 9vw;
   }
 
@@ -24,7 +24,7 @@
     @include fontMuseolight18;
     position: absolute;
     right: 17.8vw;
-    top: 11.5vw;
+    top: 11.75vw;
 
     &::after {
       @include beforeAfter;
